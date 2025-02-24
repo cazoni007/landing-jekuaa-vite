@@ -1,0 +1,22 @@
+.Icon-close {
+    display: flex;
+    justify-content: center;
+}
+
+.buttonClose {
+    position: relative;
+    left: calc(100% - 2.8rem);
+    background-color: #457014;
+    border: none;
+    cursor: pointer;
+}
+
+.buttonClose:focus {
+    outline: none;
+}
+
+.Icon-close svg{
+    fill: white;
+    width: 28px;
+    height: 25px;
+}

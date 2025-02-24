@@ -1,0 +1,65 @@
+.Icon-menu {
+    display: flex;
+    justify-content: center;
+}
+
+.dropMenu {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0; /* Fuera del viewport por completo */
+    width: 18.631rem;
+    height: 100%;
+    background-color: #457014;
+    transform: translateX(100%); /* Oculto fuera del viewport */
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Estado visible del modal (en su posición original) */
+.dropMenu--visible {
+    transform: translateX(0); /* Animación hacia su posición final */
+}
+
+.dropMenu__list {
+    list-style: none;
+}
+
+.dropMenu__item {
+    padding: 1rem 2rem;
+}
+
+.dropMenu__item a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropMenu__item--border {
+    border-top: 0.2rem solid #568b19;
+    border-bottom: 0.2rem solid #568b19;
+}
+
+.dropMenu__item--lastBorder {
+    border-top: 0.2rem solid #568b19;
+}
+
+.buttonMenu {
+    cursor: pointer;
+    background-color: white;
+    border: none;
+}
+
+.buttonMenu:focus {
+    outline: none;
+}
+
+.Icon-menu svg{
+    fill: #457014;
+    width: 4.5rem;
+    height: 4.2rem;
+}
+
+@media (min-width: 700px) {
+    .buttonMenu {
+        display: none;
+    }
+}

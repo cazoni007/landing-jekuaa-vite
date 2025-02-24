@@ -1,0 +1,54 @@
+.introduction {
+    padding: 2rem 0;
+    background-color: #457014;
+    color: white;
+}
+
+.introduction__title {
+    font-weight: bold;
+    padding: 0 1rem;
+    font-size: 2rem;
+    text-align: center;
+}
+.introduction__slogan {
+    margin-top: 0.5rem;
+    font-weight: 300;
+    font-size: 1.236rem;
+    text-align: center;
+}
+.navBar {
+    display: none;
+}
+
+@media (min-width: 700px) {
+    .navBar {
+        display: block;
+        background-color: #457014;
+        padding: 2rem 0;
+        
+    }
+    .nabBar__list {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .nabBar__item a{
+        color: white;
+        text-decoration: none;
+        font-size: 1.6rem;
+    }
+    .introduction {
+        display: none;
+    }
+}
+
+@media (min-width: 1000px) {
+    .nabBar__item a{
+        font-size: 2rem;
+    }
+    .nabBar__list {
+        max-width: 900px;
+    }
+}

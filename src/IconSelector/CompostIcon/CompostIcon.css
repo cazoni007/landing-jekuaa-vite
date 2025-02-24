@@ -1,0 +1,9 @@
+.Icon-compost {
+    display: flex;
+    justify-content: center;
+}
+
+.Icon-compost svg{
+    fill: #F07C01;
+    width: 2.4rem;
+}

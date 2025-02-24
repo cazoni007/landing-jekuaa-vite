@@ -1,0 +1,109 @@
+.testimonial {
+    margin-top: 2rem;
+}
+.testimonial__article--container {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    margin: 1.5rem;
+    align-items: flex-start;
+    scrollbar-width: none; /* Oculta la barra en Firefox */
+    -ms-overflow-style: none; /* Oculta la barra en Edge */
+}
+
+.testimonial__article--container::-webkit-scrollbar {
+    display: none; /* Oculta la barra en Chrome y Safari */
+}
+.testimonial__title {
+    font-size: 2rem;
+    color: #457014;
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+
+.testimonial__speech {
+    color: #9A4F00;
+    padding: 1rem 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.testimonial__article {
+    flex-shrink: 0;
+    margin-top: 1.5rem;
+    margin-right: 1.5rem;
+    max-width: 100%;
+    height: fit-content;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    background-color: rgba(62, 100, 18, 0.8);
+    box-shadow: 0rem 0.4rem 0.8rem rgba(0, 0, 0, 16%);
+    padding: 1.2rem;
+    border-left: #d16c01 solid 0.7rem;
+    color: white;
+}
+
+.testimonial__autor {
+    padding-top: 0.5rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.testimonial__personSpeech {
+    font-weight: 200;
+}
+
+.testimonial__containerMedia {
+    display: flex;
+    justify-content: center;
+}
+
+.testimonial__img, .testimonial__video {
+    width: 100%;
+    padding-top: 1rem;
+}
+
+.testimonial__animation .icon-tree path, .testimonial__animation .icon-tree circle, .testimonial__animation .Icon-leaf svg, .testimonial__animation .Icon-leaf2 svg {
+    fill: #ffffff;
+}
+
+.testimonial__animation .loadText {
+    color: #ffffff;
+}
+
+@media (min-width: 700px) {
+    .testimonial__title {
+        font-size: 2.4rem;
+        max-width: 950px;
+        margin: auto;
+    }
+    
+    .testimonial__speech {
+        font-size: 1.8rem;
+        max-width: 950px;
+        margin: auto;
+    }
+    .testimonial__article {
+        max-width: 460px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .testimonial__title {
+        display: block;
+        font-size: 2.6rem;
+    }
+    
+    .testimonial__speech {
+        font-size: 2rem;
+    }
+
+    .testimonial__autor {
+        font-size: 2rem;
+    }
+    
+    .testimonial__personSpeech {
+        font-size: 1.8rem;
+    }
+}

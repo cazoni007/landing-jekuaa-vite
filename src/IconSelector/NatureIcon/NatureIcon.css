@@ -1,0 +1,9 @@
+.Icon-nature {
+    display: flex;
+    justify-content: center;
+}
+
+.Icon-nature svg{
+    fill: #F07C01;
+    width: 2.4rem;
+}
