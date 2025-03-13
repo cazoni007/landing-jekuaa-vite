@@ -7,6 +7,7 @@ import { Services } from '../Services'
 import { Testimonials } from '../Testimonials'
 import { Form } from '../Form'
 import { Footer } from '../Footer'
+import { Experiences } from '../Experiencias'
 
 function AppUI() {
     return (
@@ -21,11 +22,12 @@ function AppUI() {
                             <Services />
                         </PrincipalMain>
                     } />
-                    <Route path='/testimonios' element={<Testimonials />}/>
-                    <Route path='/solicitaInformacion' element={<Form />}/>
+                    <Route path='/testimonios' element={<Testimonials />} />
+                    <Route path='/solicitaInformacion' element={<Form />} />
+                    <Route path='/experiencias' element={<Experiences />} />
                     <Route path="*" element={<p>Not Found</p>} />
                 </Routes>
-            <Footer />
+                <Footer />
             </HashRouter>
         </>
     )

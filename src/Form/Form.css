@@ -1,8 +1,8 @@
 .formTitle {
     font-size: 2rem;
-    color: #E07502;
+    color: #AE712B;
     text-align: center;
-    padding: 0 1rem;
+    padding: 2rem 1rem 0rem 1rem;
 }
 
 .form {
@@ -11,7 +11,7 @@
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    background-color: #EFB577;
+    background-color: #FCBE1B;
     border-radius: 0.4rem;
     width: 80%;
 }
@@ -32,7 +32,7 @@
     width: 100%;
     font-family: "DM Sans", serif;
     border-radius: 0.4rem;
-    border: solid 0.1rem #61B600;
+    border: solid 0.1rem #6DC742;
     font-size: 1.335rem;
 }
 
@@ -43,7 +43,7 @@
     font-family: "DM Sans", serif;
     color: white;
     width: 40%;
-    background-color: #457014;
+    background-color: #18513D;
     margin: 1.5rem auto;
     margin-bottom: 0.5rem;
     font-size: 1.35rem;

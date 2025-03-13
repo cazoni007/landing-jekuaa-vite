@@ -2,7 +2,7 @@
     padding-bottom: 1.5rem;
     text-align: center;
     color: white;
-    background-color: rgba(69, 112, 20, 75%);
+    background-color: rgba(36, 119, 90, 0.75);
 }
 
 .services__title {
@@ -20,7 +20,7 @@
     border-radius: 0.4rem;
     text-align: left;
     color: white;
-    background-color: rgba(39, 63, 11, 60%);
+    background-color: rgba(24, 81, 61, 60%);
     box-shadow: 0rem 0.4rem 0.8rem rgba(0, 0, 0, 16%);
     margin: 1.5rem;
     min-height: 17rem;
@@ -102,6 +102,11 @@
     font-weight: 700;
     width: 70%;
     animation: breath 2s linear infinite;
+}
+
+.services__button--a {
+    text-decoration: none;
+    color: white;
 }
 
 .services__button:hover {

@@ -1,20 +1,17 @@
-import { IconSelector } from '..'; // Importa el componente TodoIcon
-import { Menu } from './menu';
 import React from 'react';
+import { IconSelector } from '..';
 import { LandingContext } from '../../LandingContext';
-import './DropDownMenu.css'
+import './DropDownMenu.css';
+import { Menu } from './Menu';
 
 function DropDownMenu() {
-  const {modal, setModal} = React.useContext(LandingContext);
-  const clickIcon = () => {
-    setModal(!modal);
-  }
+  const { toggleMenu } = React.useContext(LandingContext);
   return (
     <>
-      <button className='buttonMenu' onClick={clickIcon} alt="boton menu">
+      <button className='buttonMenu' onClick={toggleMenu} alt="boton menu">
         <IconSelector type="menu"/>
-      </button> {/* Renderiza el ícono de "check" */}
-      <Menu isVisible={modal}/>
+      </button>
+      <Menu />
     </>
   );
 }

@@ -27,7 +27,7 @@
     font-size: 1.6rem;
     font-weight: 700;
     margin-top: 8rem;
-    color: #457014;
+    color: #18513D;
     animation: text-breath 2s linear infinite;
 }
 
@@ -44,7 +44,7 @@
 }
 
 .icon-tree path, .icon-tree circle, .Icon-leaf svg, .Icon-leaf2 svg {
-    fill: #457014;
+    fill: #18513D;
 }
 
 /* Keyframes para la animación de la hoja */

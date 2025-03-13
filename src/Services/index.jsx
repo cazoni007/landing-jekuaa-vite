@@ -4,6 +4,7 @@ import { LightBulbIcon } from '../IconSelector/LightBulbIcon'
 import fomentarImg from './jovenes-certificado.jpg'
 import fortalecerImg from './nina-y-senora.jpg'
 import promoverImg from './ninos-jurando.jpg'
+import { NavLink } from 'react-router-dom';
 import './Services.css'
 
 function Services() {
@@ -49,7 +50,7 @@ function Services() {
                     </article>
                 ))}
             </div>
-            <button className='services__button'>Nuestras experiencias diseñadas para ti</button>
+            <button className='services__button'><NavLink className='services__button--a' to='/experiencias' onClick={() => clickIcon('voces')}>Nuestras experiencias diseñadas para ti</NavLink></button>
         </section>
     )
 }

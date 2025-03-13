@@ -16,7 +16,7 @@
     align-items: center;
 }
 .logo {
-    width: 5rem;
+    width: 8rem;
 }
 
 .logo-text {
@@ -36,7 +36,7 @@
         width: 100%;
     }
     .logo {
-        width: 10rem;
+        width: 18rem;
     }
     
     .logo-text {
@@ -46,13 +46,13 @@
     .header__title {
         display: block;
         margin-top: 1rem;
-        color: #61B600;
+        color: #18513D;
         font-size: 2.5rem;
     }
     .header__slogan {
         display: block;
         margin: 0.5rem 0;
-        color: #61B600;
+        color: #18513D;
         font-size: 1.736rem;
     }
 }
@@ -60,7 +60,7 @@
 @media (min-width: 1000px) {
     .logo {
         margin-top: 0.5rem;
-        width: 11rem;
+        width: 19rem;
     }
     
     .logo-text {
