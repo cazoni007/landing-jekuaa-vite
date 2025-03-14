@@ -1,81 +1,85 @@
 /* Overlay que cubre toda la pantalla */
 .menu-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent; /* Sin color por defecto */
-    z-index: 1;
-    transition: background 0.3s ease-in-out;
-  }
-  
-  .menu-overlay--visible {
-    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente cuando el menú está visible */
-  }
-  
-  /* Menú lateral */
-  .dropMenu {
-    position: fixed;
-    z-index: 2; /* Debe estar por encima del overlay */
-    top: 0;
-    right: 0; /* Inicialmente fuera del viewport */
-    width: 18.631rem;
-    height: 100%;
-    background-color: #18513D;
-    transform: translateX(100%);
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  /* Estado visible del menú */
-  .dropMenu--visible {
-    transform: translateX(0);
-  }
-  
-  /* Resto de estilos para el menú */
-  .dropMenu__list {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .dropMenu__item {
-    padding: 1rem 2rem;
-  }
-  
-  .dropMenu__item a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .dropMenu__item--border {
-    border-top: 0.2rem solid #288262;
-    border-bottom: 0.2rem solid #288262;
-  }
-  
-  .dropMenu__item--lastBorder {
-    border-top: 0.2rem solid #288262;
-  }
-  
-  /* Estilos para el botón de menú (sólo en móvil) */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  /* Sin color por defecto */
+  z-index: 1;
+  transition: background 0.3s ease-in-out;
+}
+
+.menu-overlay--visible {
+  background: rgba(0, 0, 0, 0.5);
+  /* Fondo semi-transparente cuando el menú está visible */
+  z-index: 3;
+}
+
+/* Menú lateral */
+.dropMenu {
+  position: fixed;
+  z-index: 4;
+  /* Debe estar por encima del overlay */
+  top: 0;
+  right: 0;
+  /* Inicialmente fuera del viewport */
+  width: 18.631rem;
+  height: 100%;
+  background-color: #18513D;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Estado visible del menú */
+.dropMenu--visible {
+  transform: translateX(0);
+}
+
+/* Resto de estilos para el menú */
+.dropMenu__list {
+  list-style: none;
+  padding: 0;
+}
+
+.dropMenu__item {
+  padding: 1rem 2rem;
+}
+
+.dropMenu__item a {
+  color: white;
+  text-decoration: none;
+}
+
+.dropMenu__item--border {
+  border-top: 0.2rem solid #288262;
+  border-bottom: 0.2rem solid #288262;
+}
+
+.dropMenu__item--lastBorder {
+  border-top: 0.2rem solid #288262;
+}
+
+/* Estilos para el botón de menú (sólo en móvil) */
+.buttonMenu {
+  cursor: pointer;
+  background-color: white;
+  border: none;
+}
+
+.buttonMenu:focus {
+  outline: none;
+}
+
+.Icon-menu svg {
+  fill: #18513D;
+  width: 4.5rem;
+  height: 4.2rem;
+}
+
+@media (min-width: 700px) {
   .buttonMenu {
-    cursor: pointer;
-    background-color: white;
-    border: none;
+    display: none;
   }
-  
-  .buttonMenu:focus {
-    outline: none;
-  }
-  
-  .Icon-menu svg {
-    fill: #18513D;
-    width: 4.5rem;
-    height: 4.2rem;
-  }
-  
-  @media (min-width: 700px) {
-    .buttonMenu {
-      display: none;
-    }
-  }
-  
+}

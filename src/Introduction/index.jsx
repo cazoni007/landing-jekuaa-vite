@@ -21,6 +21,7 @@ function Introduction() {
                     <li className='nabBar__item'><NavLink to='/testimonios' onClick={() => scrollToSection('voces')}>Testimonios</NavLink></li>
                     <li className='nabBar__item'><NavLink to='/solicitaInformacion'>Solicita información</NavLink></li>
                     <li className='nabBar__item'><NavLink to="/experiencias">Nuestras Experiencias</NavLink></li>
+                    <li className='nabBar__item'><NavLink to="/servicios">Servicios</NavLink></li>
                 </ul>
             </nav>
         </>

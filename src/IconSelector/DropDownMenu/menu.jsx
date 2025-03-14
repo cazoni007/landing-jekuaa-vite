@@ -26,7 +26,7 @@ function Menu() {
   return (
     <div className={`menu-overlay ${animateMenuIn ? 'menu-overlay--visible' : ''}`} onClick={closeOnOverlayClick}>
       <div className={`dropMenu ${animateMenuIn ? 'dropMenu--visible' : ''}`} onClick={(e) => e.stopPropagation()}>
-        <CloseIcon />
+        <CloseIcon/>
         <ul className='dropMenu__list'>
           <li className='dropMenu__item'>
             <NavLink to='/' onClick={() => clickIcon('presentation')}>Quienes somos</NavLink>
@@ -42,6 +42,9 @@ function Menu() {
           </li>
           <li className='dropMenu__item dropMenu__item--lastBorder'>
             <NavLink to="/experiencias" onClick={() => clickIcon('')}>Nuestras Experiencias</NavLink>
+          </li>
+          <li className='dropMenu__item dropMenu__item--lastBorder'>
+            <NavLink to="/servicios" onClick={() => clickIcon('')}>Servicios</NavLink>
           </li>
         </ul>
       </div>

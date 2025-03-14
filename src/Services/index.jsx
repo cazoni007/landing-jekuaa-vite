@@ -50,7 +50,7 @@ function Services() {
                     </article>
                 ))}
             </div>
-            <button className='services__button'><NavLink className='services__button--a' to='/experiencias' onClick={() => clickIcon('voces')}>Nuestras experiencias diseñadas para ti</NavLink></button>
+            <button className='services__button'><NavLink className='services__button--a' to='/experiencias'>Nuestras experiencias diseñadas para ti</NavLink></button>
         </section>
     )
 }

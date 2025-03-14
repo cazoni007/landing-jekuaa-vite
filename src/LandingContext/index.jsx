@@ -1,16 +1,24 @@
 import React, { useState, useRef, useMemo } from "react";
-import fotoMariela from "./nino-mostrando-hormiga.jpg";
-import videoRicardo from "./entrada-al-bosque.mp4";
-import fotoDaniel from "./viendo-microscopio-lab.jpg";
-import fotoCarla from "./jovenes-sentados.jpg";
-import estudiantesNaturaleza from './estudiando-en-naturaleza.jpg';
-import estudiantesNaturaleza2 from './estudiando-en-naturaleza-vertical.jpg';
-import senorasSentadas from './senoras-sentadas.jpg';
-import ninosAbeja from './ninos-abeja-posando.jpg';
-import jovenMirando from './joven-viendo-hormigas.jpg';
-import ninoEscavando from './nino-escavando.jpg';
-import empresaCharla from './empresa-charla.jpg';
-import empresaComiendo from './empresa-comiendo.jpg';
+import fotoMariela from "./Media/nino-mostrando-hormiga.jpg";
+import videoRicardo from "./Media/entrada-al-bosque.mp4";
+import fotoDaniel from "./Media/viendo-microscopio-lab.jpg";
+import fotoCarla from "./Media/jovenes-sentados.jpg";
+import estudiantesNaturaleza from './Media/estudiando-en-naturaleza.jpg';
+import estudiantesNaturaleza2 from './Media/estudiando-en-naturaleza-vertical.jpg';
+import senorasSentadas from './Media/senoras-sentadas.jpg';
+import ninosAbeja from './Media/ninos-abeja-posando.jpg';
+import jovenMirando from './Media/joven-viendo-hormigas.jpg';
+import ninoEscavando from './Media/nino-escavando.jpg';
+import empresaCharla from './Media/empresa-charla.jpg';
+import empresaComiendo from './Media/empresa-comiendo.jpg';
+import ninosPlantando from './Media/ninos-plantando-semillas.jpg';
+import explicandoAbejas from './Media/explicando-abejas.jpg';
+import ninosArte from './Media/ninos-arte.jpg';
+import ninosViendoFrascos from './Media/ninos-viendo-frasco-miel.jpg';
+import ninoCocinando from './Media/nino-cocinando-2.jpg';
+import ninosCocinando from './Media/ninos-cocinando.jpg';
+import jovenesAlimentando from './Media/jovenes-alimentando-avejas.jpg';
+import ninoConejo from './Media/nino-agarrando-conejo.jpg'
 
 const LandingContext = React.createContext();
 
@@ -19,6 +27,39 @@ function LandingProvider({ children }) {
     const [menuVisible, setMenuVisible] = useState(false);
     const [shouldRenderMenu, setShouldRenderMenu] = useState(false);
     const [animateMenuIn, setAnimateMenuIn] = useState(false);
+
+    const [upArrowInvisible, setUpArrowInvisible] = useState(true);
+    const [upArrowInvisible2, setUpArrowInvisible2] = useState(true);
+    const [upArrowInvisible3, setUpArrowInvisible3] = useState(true);
+    const [upArrowInvisible4, setUpArrowInvisible4] = useState(true);
+
+    const setTrue = () => (
+        setUpArrowInvisible(true)
+    )
+    const setFalse = () => (
+        setUpArrowInvisible(false)
+    )
+
+    const setTrue2 = () => (
+        setUpArrowInvisible2(true)
+    )
+    const setFalse2 = () => (
+        setUpArrowInvisible2(false)
+    )
+
+    const setTrue3 = () => (
+        setUpArrowInvisible3(true)
+    )
+    const setFalse3 = () => (
+        setUpArrowInvisible3(false)
+    )
+
+    const setTrue4 = () => (
+        setUpArrowInvisible4(true)
+    )
+    const setFalse4 = () => (
+        setUpArrowInvisible4(false)
+    )
 
     const openMenu = () => {
         setMenuVisible(true);
@@ -42,7 +83,7 @@ function LandingProvider({ children }) {
         }
     };
 
-    // Datos para testimonios, experiencias, etc.
+    // Datos para testimonios, experiencias y servicios.
     const testimonials = [
         {
             person: "Cristhian Camacho",
@@ -98,6 +139,43 @@ function LandingProvider({ children }) {
         },
     ]
 
+    const services = [{
+        title:'Jekuaá Aventureros',
+        speech: 'Una experiencia inmersiva de un día donde los estudiantes recorren tres estaciones de aprendizaje en la naturaleza. Incluye actividades recreativas y contenido adaptado a la currícula nacional, brindando un enfoque vivencial y dinámico a la educación.',
+        state: upArrowInvisible,
+        setStateTrue: setTrue,
+        setStateFalse: setFalse,
+        img: ninosPlantando,
+        img2: explicandoAbejas,
+    },
+    {
+        title:'Jekuaá Innovadores',
+        speech: 'Talleres especializados y personalizados en temáticas de interés para colegios, alineados con la currícula nacional. Estos talleres permiten a los estudiantes profundizar en temas ambientales, científicos y tecnológicos de manera práctica y aplicada.',
+        state: upArrowInvisible2,
+        setStateTrue: setTrue2,
+        setStateFalse: setFalse2,
+        img: ninosArte,
+        img2: ninosViendoFrascos,
+    },
+    {
+        title:'Jekuaá Creadores',
+        speech: 'Un programa integral que combina una visita a Jekuaá Urubó con un taller de creatividad para la generación de proyectos y emprendimientos ambientales. Culmina con una feria de exposición donde los estudiantes presentan sus iniciativas ante la comunidad educativa y expertos.',
+        state: upArrowInvisible3,
+        setStateTrue: setTrue3,
+        setStateFalse: setFalse3,
+        img: ninoCocinando,
+        img2: ninosCocinando,
+    },
+    {
+        title:'Jekuaá Guardianes',
+        speech: ' Todos los colegios participantes pueden enviar sus proyectos medioambientales al equipo del bosque escuela. Los mejores serán reconocidos en un evento especial a fin de año, incentivando la innovación y el compromiso con el medio ambiente',
+        state: upArrowInvisible4,
+        setStateTrue: setTrue4,
+        setStateFalse: setFalse4,
+        img: jovenesAlimentando,
+        img2: ninoConejo,
+    },]
+
     // Incluimos containerRef para la sección de testimonios
     const containerRef = useRef(null);
 
@@ -118,6 +196,7 @@ function LandingProvider({ children }) {
         setIsPaused,
         experiences,
         experiences2,
+        services,
     }), [menuVisible, shouldRenderMenu, animateMenuIn, testimonials, experiences, experiences2, isPaused]);
 
     return (

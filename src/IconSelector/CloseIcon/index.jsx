@@ -4,9 +4,9 @@ import { LandingContext } from '../../LandingContext';
 import './CloseIcon.css'
 
 function CloseIcon() {
-  const {setModal} = React.useContext(LandingContext);
+  const {closeMenu} = React.useContext(LandingContext);
   const clickIcon = () => {
-    setModal(false)
+    closeMenu()
   }
   return (
       <button className='buttonClose' onClick={clickIcon} alt="boton cerrar menu">

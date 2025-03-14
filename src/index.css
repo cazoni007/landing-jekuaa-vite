@@ -21,6 +21,16 @@ body {
   background-attachment: fixed; /* Fija el fondo mientras se desplaza */
 }
 
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ocupa al menos la altura total de la ventana */
+}
+
+.main-content {
+  flex: 1; /* Hace que el contenido principal crezca y empuje el footer hacia abajo */
+}
+
 @media (min-width: 1000px) {
   body {
     background-size: cover;

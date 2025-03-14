@@ -9,8 +9,6 @@
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 1.5rem;
-    /* fontSize: '2.5rem',
-    marginBottom: '10px' */
 }
 
 .experiences__subtitle {
@@ -55,11 +53,10 @@
     min-height: 25rem;
     /* Ajusta según contenido */
     transform-style: preserve-3d;
-
 }
 
 .experiences__imgArticle--section3 {
-    animation: flipAnimation2 16s ease-in-out infinite;
+    animation: flipAnimation2 20s ease-in-out infinite;
 }
 
 
@@ -107,11 +104,11 @@
         font-size: 1.8rem;
     }
 
-    .services__titleArticle {
+    .experiences__titleArticle {
         font-size: 2.2rem;
     }
 
-    .services__speechArticle {
+    .experiences__speechArticle {
         font-size: 1.8rem;
     }
 }
