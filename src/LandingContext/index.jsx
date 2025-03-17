@@ -1,4 +1,17 @@
 import React, { useState, useRef, useMemo } from "react";
+
+//Form Component
+import tiktok from './Media/tiktok-logo.png'
+import facebook from './Media/facebook-logo.png'
+import whatsApp from './Media/whatsapp-logo.png'
+
+//Presentation Component
+import videoSrc from "./Media/presentationPhone.mp4";
+import videoSrcPc from './Media/presentationPC.mp4'
+import abejita from "./Media/abejitaSinSilla.png"
+
+import logo from './Media/logo.png'
+
 import fotoMariela from "./Media/nino-mostrando-hormiga.jpg";
 import videoRicardo from "./Media/entrada-al-bosque.mp4";
 import fotoDaniel from "./Media/viendo-microscopio-lab.jpg";
@@ -32,6 +45,15 @@ function LandingProvider({ children }) {
     const [upArrowInvisible2, setUpArrowInvisible2] = useState(true);
     const [upArrowInvisible3, setUpArrowInvisible3] = useState(true);
     const [upArrowInvisible4, setUpArrowInvisible4] = useState(true);
+
+    //Presentation Component States and Functions
+    const [loadingPresentation, setLoadingPresentation] = React.useState(true);
+    const [errorPresentation, setErrorPresentation] = React.useState(false);
+    const [isDesktop, setIsDesktop] = React.useState(false)
+    const handleVideoErrorPresentation = () => {
+        setLoadingPresentation(false);
+        setErrorPresentation(true);
+    };
 
     const setTrue = () => (
         setUpArrowInvisible(true)
@@ -140,7 +162,7 @@ function LandingProvider({ children }) {
     ]
 
     const services = [{
-        title:'Jekuaá Aventureros',
+        title: 'Jekuaá Aventureros',
         speech: 'Una experiencia inmersiva de un día donde los estudiantes recorren tres estaciones de aprendizaje en la naturaleza. Incluye actividades recreativas y contenido adaptado a la currícula nacional, brindando un enfoque vivencial y dinámico a la educación.',
         state: upArrowInvisible,
         setStateTrue: setTrue,
@@ -149,7 +171,7 @@ function LandingProvider({ children }) {
         img2: explicandoAbejas,
     },
     {
-        title:'Jekuaá Innovadores',
+        title: 'Jekuaá Innovadores',
         speech: 'Talleres especializados y personalizados en temáticas de interés para colegios, alineados con la currícula nacional. Estos talleres permiten a los estudiantes profundizar en temas ambientales, científicos y tecnológicos de manera práctica y aplicada.',
         state: upArrowInvisible2,
         setStateTrue: setTrue2,
@@ -158,7 +180,7 @@ function LandingProvider({ children }) {
         img2: ninosViendoFrascos,
     },
     {
-        title:'Jekuaá Creadores',
+        title: 'Jekuaá Creadores',
         speech: 'Un programa integral que combina una visita a Jekuaá Urubó con un taller de creatividad para la generación de proyectos y emprendimientos ambientales. Culmina con una feria de exposición donde los estudiantes presentan sus iniciativas ante la comunidad educativa y expertos.',
         state: upArrowInvisible3,
         setStateTrue: setTrue3,
@@ -167,7 +189,7 @@ function LandingProvider({ children }) {
         img2: ninosCocinando,
     },
     {
-        title:'Jekuaá Guardianes',
+        title: 'Jekuaá Guardianes',
         speech: ' Todos los colegios participantes pueden enviar sus proyectos medioambientales al equipo del bosque escuela. Los mejores serán reconocidos en un evento especial a fin de año, incentivando la innovación y el compromiso con el medio ambiente',
         state: upArrowInvisible4,
         setStateTrue: setTrue4,
@@ -197,6 +219,19 @@ function LandingProvider({ children }) {
         experiences,
         experiences2,
         services,
+        tiktok,
+        facebook,
+        whatsApp,
+        logo,
+        videoSrc,
+        videoSrcPc,
+        abejita,
+        loadingPresentation,
+        setLoadingPresentation,
+        errorPresentation,
+        isDesktop,
+        setIsDesktop,
+        handleVideoErrorPresentation,
     }), [menuVisible, shouldRenderMenu, animateMenuIn, testimonials, experiences, experiences2, isPaused]);
 
     return (

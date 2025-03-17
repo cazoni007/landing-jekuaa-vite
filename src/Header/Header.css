@@ -4,7 +4,7 @@
     align-items: center;
     background: 
     linear-gradient(rgba(252, 240, 255, 0.85), rgba(251, 241, 255, 0.95)), /* Capa de color encima */
-    url('./fondo-header.png') center; /* Imagen de fondo */
+    url('../LandingContext/Media/fondo-header.png') center; /* Imagen de fondo */
 }
 
 .header__content {

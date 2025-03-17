@@ -1,9 +1,10 @@
 import './Header.css';
-import logo from './logo.png'
-
+import { useContext } from 'react';
+import { LandingContext } from '../LandingContext/index.jsx';
 import { DropDownMenu } from '../IconSelector/DropDownMenu/index.jsx'
 
 function Header() {
+    const {logo} = useContext(LandingContext);
     return (
         <header className="header">
             <div className='header__content'>

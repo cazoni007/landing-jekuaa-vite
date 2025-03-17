@@ -1,15 +1,18 @@
 import React from "react";
-import videoSrc from "./presentationPhone.mp4";
-import videoSrcPc from './presentationPC.mp4'
-import abejita from "./abejitaSinSilla.png"
 import './Presentation.css';
+import { LandingContext } from "../LandingContext";
 import { LoadAnimation } from "../IconSelector/LoadAnimation";
 
 function Presentation() {
-    const [loading, setLoading] = React.useState(true);
-    const [error, setError] = React.useState(false);
-    const [isDesktop, setIsDesktop] = React.useState(false)
-
+    const { videoSrc,
+            videoSrcPc,
+            abejita,
+            loadingPresentation,
+            setLoadingPresentation,
+            errorPresentation,
+            isDesktop,
+            setIsDesktop,
+            handleVideoError, } = React.useContext(LandingContext)
     React.useEffect(() => {
         const checkScreenSize = () => {
             setIsDesktop(window.innerWidth >= 800);
@@ -22,27 +25,23 @@ function Presentation() {
         // Limpiar evento al desmontar
         return () => window.removeEventListener('resize', checkScreenSize);
     }, []);
-
-    const handleVideoError = () => {
-        setLoading(false);
-        setError(true);
-    };
+    
     return (
         <>
-            {error && <p className="errorMessage">No se pudo cargar el video</p>}
-            {!error && (
+            {errorPresentation && <p className="errorMessage">No se pudo cargar el video</p>}
+            {!errorPresentation && (
                 <div className="videoContainer">
-                    {loading && <LoadAnimation />}
-                    {error && <p className="errorMessage">No se pudo cargar el video</p>}
-                    {!error && (
+                    {loadingPresentation && <LoadAnimation />}
+                    {errorPresentation && <p className="errorMessage">No se pudo cargar el video</p>}
+                    {!errorPresentation && (
                         <video
                             key={isDesktop ? 'desktop' : 'mobile'}
-                            onLoadedData={() => setLoading(false)}
+                            onLoadedData={() => setLoadingPresentation(false)}
                             onError={handleVideoError}
                             loop
                             autoPlay
                             muted
-                            className={`videoContainer__presentationVideo ${loading ? 'hidden' : 'visible'}`}
+                            className={`videoContainer__presentationVideo ${loadingPresentation ? 'hidden' : 'visible'}`}
                         >
                             <source
                                 src={isDesktop ? videoSrcPc : videoSrc}

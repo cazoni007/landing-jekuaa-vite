@@ -1,10 +1,9 @@
 import './Form.css'
-import React from 'react'
-import tiktok from './tiktok-logo.png'
-import facebook from './facebook-logo.png'
-import whatsApp from './whatsapp-logo.png'
+import React, { useContext } from 'react'
+import { LandingContext } from '../LandingContext'
 
 function Form() {
+    const {tiktok, facebook, whatsApp} = useContext(LandingContext);
     const [isVisible, setIsVisible] = React.useState(false);
     const formRef = React.useRef(null);
 
