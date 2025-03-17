@@ -59,7 +59,7 @@ function Presentation() {
                 <div className="presentation__abejaDiv">
                     <img className="presentation__abejaImg" src={abejita} alt="abejita" />
                 </div>
-                <p className="presentation__introSpeech">A tan solo 15 minutos de la ciudad, en un rincón mágico rodeado de naturaleza, se encuentra Jekuaá Urubó bosque escuela. Un espacio único donde el canto de las aves, la sombra de los árboles y el aire fresco se convierten en el aula perfecta para aprender, conectar y crecer.</p>
+                <p className="presentation__introSpeech">A tan solo 15 minutos de la ciudad, en un rincón mágico rodeado de naturaleza, se encuentra Jekuaá bosque escuela. Un espacio único donde el canto de las aves, la sombra de los árboles y el aire fresco se convierten en el aula perfecta para aprender, conectar y crecer.</p>
                 <h2 className="presentation__title">Quiénes somos</h2>
                 <p className="presentation__speech">
                     Somos Jekuaá Urubó bosque escuela, un espacio único diseñado para reconectar a las personas con la naturaleza y entre sí. A través de experiencias al aire libre, ofrecemos oportunidades educativas, recreativas y transformadoras para colegios, familias, empresas y aliados estratégicos.

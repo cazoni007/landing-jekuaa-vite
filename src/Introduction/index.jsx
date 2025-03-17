@@ -11,17 +11,17 @@ function Introduction() {
     return (
         <>
             <section className='introduction'>
-                <h2 className="introduction__title">Bienvenidos a Jekuaá Urubó bosque escuela</h2>
+                <h2 className="introduction__title">Bienvenidos a Jekuaá Bosque Escuela</h2>
                 <p className="introduction__slogan">Aprende y conecta con la naturaleza</p>
             </section>
             <nav className='navBar'>
                 <ul className='nabBar__list'>
                     <li className='nabBar__item'><NavLink to='/' onClick={() => scrollToSection('presentation')}>Quiénes somos</NavLink></li>
                     <li className='nabBar__item'><NavLink to='/' onClick={() => scrollToSection('services')}>Nuestra propuesta</NavLink></li>
+                    <li className='nabBar__item'><NavLink to="/experiencias">Experiencias personalizadas</NavLink></li>
+                    <li className='nabBar__item'><NavLink to="/servicios">Programas</NavLink></li>
                     <li className='nabBar__item'><NavLink to='/testimonios' onClick={() => scrollToSection('voces')}>Testimonios</NavLink></li>
                     <li className='nabBar__item'><NavLink to='/solicitaInformacion'>Solicita información</NavLink></li>
-                    <li className='nabBar__item'><NavLink to="/experiencias">Nuestras Experiencias</NavLink></li>
-                    <li className='nabBar__item'><NavLink to="/servicios">Servicios</NavLink></li>
                 </ul>
             </nav>
         </>

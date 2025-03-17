@@ -64,7 +64,7 @@
 /* Estilos para el botón de menú (sólo en móvil) */
 .buttonMenu {
   cursor: pointer;
-  background-color: white;
+  background-color: transparent;
   border: none;
 }
 

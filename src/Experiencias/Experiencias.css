@@ -37,17 +37,6 @@
     padding-right: 2rem;
 }
 
-.services__titleArticle {
-    font-size: 1.8rem;
-}
-
-.services__speechArticle {
-    padding-top: 1rem;
-    padding-bottom: 1.5rem;
-    font-size: 1.4rem;
-    font-weight: 200;
-}
-
 .experiences__imgArticle {
     margin-top: 1.5rem;
     min-height: 25rem;
@@ -58,7 +47,6 @@
 .experiences__imgArticle--section3 {
     animation: flipAnimation2 20s ease-in-out infinite;
 }
-
 
 .experiences__images--front,
 .experiences__images--back {

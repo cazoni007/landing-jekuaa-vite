@@ -3,6 +3,7 @@
   padding: 0px;
   margin: 0px;
 }
+
 html {
   font-size: 62.5%;
   font-family: "DM Sans", serif;
@@ -10,25 +11,34 @@ html {
   font-weight: 400;
   font-style: normal;
 }
+
 body {
   font-size: 1.6rem;
-  background: 
-    linear-gradient(rgba(244, 244, 244, 0.85), rgba(232, 232, 232, 0.95)), /* Capa de color encima */
-    url('./fondoOptimize.jpg'); /* Imagen de fondo */
-  
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* Fija el fondo mientras se desplaza */
+  /* background:
+    linear-gradient(rgba(244, 244, 244, 0.85), rgba(232, 232, 232, 0.95)),
+    /* Capa de color encima
+    url('./fondoOptimize.jpg');
+  /* Imagen de fondo */
+
+  background:
+    linear-gradient(rgba(252, 240, 255, 0.80), rgba(251, 241, 255, 0.90)),
+    /* Capa de color encima */
+    url('./fondo-optimize.png') center/cover no-repeat;
+  /* Imagen de fondo */
+  background-attachment: fixed;
+  /* Fija el fondo mientras se desplaza */
 }
 
 .app-wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ocupa al menos la altura total de la ventana */
+  min-height: 100vh;
+  /* Ocupa al menos la altura total de la ventana */
 }
 
 .main-content {
-  flex: 1; /* Hace que el contenido principal crezca y empuje el footer hacia abajo */
+  flex: 1;
+  /* Hace que el contenido principal crezca y empuje el footer hacia abajo */
 }
 
 @media (min-width: 1000px) {

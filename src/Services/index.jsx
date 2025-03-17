@@ -32,7 +32,7 @@ function Services() {
     return (
         <section className='services' id='services'>
             <h2 className='services__title'>Nuestra propuesta:<br />Conectar, Educar y Transformar</h2>
-            <p className='services__speech'>En Jekuaá Urubó bosque escuela, creamos experiencias únicas en la naturaleza que transforman la forma de aprender, conectar y vivir. Nuestra misión es:</p>
+            <p className='services__speech'>En Jekuaá bosque escuela, creamos experiencias únicas en la naturaleza que transforman la forma de aprender, conectar y vivir. Nuestra misión es:</p>
             <div className='services__articlesContainer'>
                 {services.map(service => (
                     <article className={`services__article services__article--${service.theme}`} key={service.title}>
@@ -50,7 +50,7 @@ function Services() {
                     </article>
                 ))}
             </div>
-            <button className='services__button'><NavLink className='services__button--a' to='/experiencias'>Nuestras experiencias diseñadas para ti</NavLink></button>
+            <NavLink className='services__button--a' to='/experiencias'><button className='services__button'>Nuestras experiencias diseñadas para ti</button></NavLink>
         </section>
     )
 }

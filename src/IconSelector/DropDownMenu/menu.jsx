@@ -35,16 +35,16 @@ function Menu() {
             <NavLink to='/' onClick={() => clickIcon('services')}>Nuestra propuesta</NavLink>
           </li>
           <li className='dropMenu__item'>
+            <NavLink to="/experiencias" onClick={() => clickIcon('')}>Experiencias personalizadas</NavLink>
+          </li>
+          <li className='dropMenu__item dropMenu__item--lastBorder'>
+            <NavLink to="/servicios" onClick={() => clickIcon('')}>Programas</NavLink>
+          </li>
+          <li className='dropMenu__item dropMenu__item--lastBorder'>
             <NavLink to='/testimonios' onClick={() => clickIcon('voces')}>Testimonios</NavLink>
           </li>
           <li className='dropMenu__item dropMenu__item--lastBorder'>
             <NavLink to="/solicitaInformacion" onClick={() => clickIcon('')}>Solicita Informacion</NavLink>
-          </li>
-          <li className='dropMenu__item dropMenu__item--lastBorder'>
-            <NavLink to="/experiencias" onClick={() => clickIcon('')}>Nuestras Experiencias</NavLink>
-          </li>
-          <li className='dropMenu__item dropMenu__item--lastBorder'>
-            <NavLink to="/servicios" onClick={() => clickIcon('')}>Servicios</NavLink>
           </li>
         </ul>
       </div>
