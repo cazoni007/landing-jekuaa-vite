@@ -9,7 +9,6 @@ function Form() {
 
     React.useEffect(() => {
         const formElement = formRef.current;
-
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
@@ -22,11 +21,9 @@ function Form() {
                 threshold: 0.1
             }
         );
-
         if (formElement) {
             observer.observe(formElement);
         }
-
         return () => {
             if (formElement) {
                 observer.unobserve(formElement);

@@ -20,11 +20,12 @@ function Pack() {
                     return (
                         <article className='pack__article' key={index}>
                             <div className='pack__headerContainer' onClick={() => service.state ? service.setStateFalse() : service.setStateTrue()}>
-                                <h1 className='pack__articleTitle'>{service.title}</h1>
+                                <h1 className={`pack__articleTitle ${service.bonus}`}>{service.title}</h1>
                                 <span className={`Icon-upArrow ${service.state ? "invisible" : ""}`}><UpArrow /></span>
                                 <span className={`Icon-downArrow ${!service.state ? "invisible" : ""}`}><DownArrow /></span>
                             </div>
                             <div className={`pack__contentContainer ${service.state ? "pack__contentContainer--hidden" : ""}`}>
+                                {service.bonusTitle && <p className='pack__articleText pack__articleText--bonus'>{service.bonusTitle}</p>}
                                 <p className='pack__articleText'>{service.speech}</p>
                                 <div className='pack__imgs pack__imgs--animation'>
                                     {loading && <div className='pack__animation'><LoadAnimation /></div>}

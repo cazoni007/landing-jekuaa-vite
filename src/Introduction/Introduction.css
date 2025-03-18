@@ -1,6 +1,6 @@
 .introduction {
     padding: 2rem 0;
-    background-color: #18513D;
+    background-color: #30916f;
     color: white;
 }
 
@@ -27,7 +27,7 @@
       }
     .navBar {
         display: block;
-        background-color: #18513D;
+        background-color: #30916f;
         padding: 2rem 0;
         
     }
@@ -54,6 +54,6 @@
         font-size: 2rem;
     }
     .nabBar__list {
-        max-width: 1200px;
+        max-width: 1600px;
     }
 }

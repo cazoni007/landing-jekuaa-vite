@@ -10,6 +10,14 @@ import videoSrc from "./Media/presentationPhone.mp4";
 import videoSrcPc from './Media/presentationPC.mp4'
 import abejita from "./Media/abejitaSinSilla.png"
 
+//Services Component
+import fomentarImg from './Media/jovenes-certificado.jpg'
+import fortalecerImg from './Media/nina-y-senora.jpg'
+import promoverImg from './Media/ninos-jurando.jpg'
+import { NatureIcon } from '../IconSelector/NatureIcon'
+import { CompostIcon } from '../IconSelector/CompostIcon'
+import { LightBulbIcon } from '../IconSelector/LightBulbIcon'
+
 import logo from './Media/logo.png'
 
 import fotoMariela from "./Media/nino-mostrando-hormiga.jpg";
@@ -190,12 +198,36 @@ function LandingProvider({ children }) {
     },
     {
         title: 'Jekuaá Guardianes',
+        bonusTitle: 'Bonus!',
         speech: ' Todos los colegios participantes pueden enviar sus proyectos medioambientales al equipo del bosque escuela. Los mejores serán reconocidos en un evento especial a fin de año, incentivando la innovación y el compromiso con el medio ambiente',
         state: upArrowInvisible4,
         setStateTrue: setTrue4,
         setStateFalse: setFalse4,
         img: jovenesAlimentando,
         img2: ninoConejo,
+        bonus: 'pack__articleTitle--bonus'
+    },]
+
+    const propuestas = [{
+        theme: "fomentar",
+        title: "Fomentar aprendizajes significativos",
+        speech: "Diseñamos programas que integran la educación y la experiencia, inspirando conexión y reflexión.",
+        icon: <LightBulbIcon />,
+        image: fomentarImg,
+    },
+    {
+        theme: "fortalecer",
+        title: "Fortalecer vínculos humanos y ambientales",
+        speech: "Creamos espacios para que familias, estudiantes y equipos se conecten con la naturaleza y entre sí.",
+        icon: <NatureIcon />,
+        image: fortalecerImg,
+    },
+    {
+        theme: "promover",
+        title: "Promover la sostenibilidad",
+        speech: "Desarrollamos conciencia ambiental a través de prácticas y valores sostenibles.",
+        icon: <CompostIcon />,
+        image: promoverImg,
     },]
 
     // Incluimos containerRef para la sección de testimonios
@@ -232,6 +264,7 @@ function LandingProvider({ children }) {
         isDesktop,
         setIsDesktop,
         handleVideoErrorPresentation,
+        propuestas,
     }), [menuVisible, shouldRenderMenu, animateMenuIn, testimonials, experiences, experiences2, isPaused]);
 
     return (
