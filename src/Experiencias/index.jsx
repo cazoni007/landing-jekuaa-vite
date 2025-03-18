@@ -6,7 +6,35 @@ function Experiences() {
     const { experiences, experiences2 } = React.useContext(LandingContext);
     React.useLayoutEffect(() => {
         window.scrollTo(0, 0);
-      }, [])
+    }, [])
+
+    // Nuevo: Creamos un ref para almacenar cada artículo
+    const articlesRef = React.useRef([]);
+
+    // Nuevo: Usamos IntersectionObserver para detectar cuándo cada artículo entra en vista
+    React.useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                // Quita la clase que oculta y agrega la clase de animación
+                entry.target.classList.remove('hidden-article');
+                entry.target.classList.add('animate');
+              }
+            });
+          }, { threshold: 0.3 });
+
+        // Observa cada artículo
+        articlesRef.current.forEach(article => {
+            if (article) observer.observe(article);
+        });
+
+        // Limpieza
+        return () => {
+            articlesRef.current.forEach(article => {
+                if (article) observer.unobserve(article);
+            });
+        };
+    }, [experiences, experiences2]);
     return (
         <div className='experiences'>
             {/* Cabecera */}
@@ -16,7 +44,7 @@ function Experiences() {
             <section className='experiences__articleContainer'>
                 <div className='experience__firstArticles'>
                     {experiences.map((experience, index) => (
-                        <article className='experiences__article' key={index}>
+                        <article ref={el => articlesRef.current[index] = el} className={`experiences__article hidden-article ${index % 2 === 0 ? 'slide-left' : 'slide-right'}`} key={index}>
                             <div className='experiences__textContainer'>
                                 <h2 className='experiences__titleArticle' >{experience.title}</h2>
                                 <p className='experiences__speechArticle'>{experience.speech}</p>
@@ -35,7 +63,7 @@ function Experiences() {
                 </div>
                 <div className='experience__secondArticles'>
                     {experiences2.map((experience, index) => (
-                        <article className='experiences__article' key={index}>
+                        <article key={index + experiences.length} ref={el => articlesRef.current[index + experiences.length] = el} className={`experiences__article hidden-article ${index % 2 === 0 ? 'slide-left' : 'slide-right'}`}>
                             <div className='experiences__textContainer'>
                                 <h2 className='experiences__titleArticle' >{experience.title}</h2>
                                 <p className='experiences__speechArticle'>{experience.speech}</p>
