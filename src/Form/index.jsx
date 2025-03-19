@@ -33,6 +33,7 @@ function Form() {
     return (
         <>
             <h2 className='formTitle'>Ponte en contacto con nosotros</h2>
+            <p className='formText'>Al enviar este formulario, recibirás un correo con tus datos y la confirmación de que pronto nos pondremos en contacto contigo. Si prefieres no completarlo, puedes comunicarte directamente haciendo clic en el ícono de WhatsApp.</p>
             <form className='form'>
                 <label className='form__label' htmlFor="nombre">
                     <span className='form__spanText'>* Ingresa tu nombre o institución:</span>

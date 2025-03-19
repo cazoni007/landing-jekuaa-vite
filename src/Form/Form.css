@@ -1,8 +1,16 @@
 .formTitle {
     font-size: 2rem;
-    color: #AE712B;
+    color: #69451c;
     text-align: center;
     padding: 2rem 1rem 0rem 1rem;
+}
+
+.formText {
+    color: #a52507;
+    padding: 1rem 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-align: center;
 }
 
 .form {
@@ -114,16 +122,24 @@
     .form__buttomSubmit {
         font-size: 1.55rem;
     }
+    .formText {
+        font-size: 1.6rem;
+    }
 }
 
 @media (min-width: 1000px) {
     .formTitle {
-        font-size: 2.6rem;
+        font-size: 3rem;
     }
     .socialMedia {
         right: -10rem;
     }
     .form__buttomSubmit {
         font-size: 1.85rem;
+    }
+    .formText {
+        padding-left: 15rem;
+        padding-right: 15rem;
+        font-size: 2rem;
     }
 }

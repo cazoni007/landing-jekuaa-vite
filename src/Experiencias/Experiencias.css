@@ -82,6 +82,13 @@
   border-radius: 0.4rem;
 }
 
+.experiences__animation .icon-tree path,
+.experiences__animation .icon-tree circle,
+.experiences__animation .Icon-leaf svg,
+.experiences__animation .Icon-leaf2 svg {
+    fill: #ffffff;
+}
+
 /* Estado inicial: los artículos están opacos */
 .hidden-article {
   opacity: 0;

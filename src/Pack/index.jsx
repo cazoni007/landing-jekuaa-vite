@@ -56,11 +56,11 @@ function Pack() {
                                 <p className='pack__articleText'>{service.speech}</p>
                                 <div className='pack__imgs pack__imgs--animation'>
                                     {loading && <div className='pack__animation'><LoadAnimation /></div>}
-                                    {error && <p className="errorMessage">No se pudo cargar el video</p>}
+                                    {error && <p className="errorMessage">No se pudo cargar la imagen</p>}
 
                                     {service.img && !error && (<div className='pack__imgFront'><img onLoad={() => setLoading(false)} src={service.img} alt={`Imagen de ${service.title}`} className='pack__img' /></div>)}
 
-                                    {service.img && !error && (<div className='pack__imgBack'><img onLoad={() => setLoading(false)} src={service.img2} alt={`Imagen de ${service.title}`} className='pack__img' /></div>)}
+                                    {service.img2 && !error && (<div className='pack__imgBack'><img onLoad={() => setLoading(false)} src={service.img2} alt={`Imagen de ${service.title}`} className='pack__img' /></div>)}
                                 </div>
                             </div>
                         </article>

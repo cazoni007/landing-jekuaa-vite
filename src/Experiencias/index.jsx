@@ -1,5 +1,6 @@
 import React from 'react';
 import { LandingContext } from '../LandingContext';
+import { LoadAnimation } from '../IconSelector/LoadAnimation';
 import './Experiencias.css'
 
 function Experiences() {
@@ -15,13 +16,13 @@ function Experiences() {
     React.useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                // Quita la clase que oculta y agrega la clase de animación
-                entry.target.classList.remove('hidden-article');
-                entry.target.classList.add('animate');
-              }
+                if (entry.isIntersecting) {
+                    // Quita la clase que oculta y agrega la clase de animación
+                    entry.target.classList.remove('hidden-article');
+                    entry.target.classList.add('animate');
+                }
             });
-          }, { threshold: 0.3 });
+        }, { threshold: 0.3 });
 
         // Observa cada artículo
         articlesRef.current.forEach(article => {
@@ -43,42 +44,58 @@ function Experiences() {
             {/* Contenido Principal */}
             <section className='experiences__articleContainer'>
                 <div className='experience__firstArticles'>
-                    {experiences.map((experience, index) => (
-                        <article ref={el => articlesRef.current[index] = el} className={`experiences__article hidden-article ${index % 2 === 0 ? 'slide-left' : 'slide-right'}`} key={index}>
-                            <div className='experiences__textContainer'>
-                                <h2 className='experiences__titleArticle' >{experience.title}</h2>
-                                <p className='experiences__speechArticle'>{experience.speech}</p>
-                            </div>
-                            <div className='experiences__imgArticle experiences__imgArticle--section3'>
-                                <div className='experiences__images--front'>
-                                    <img src={experience.img} alt={`Imagen de niño escavando`} className="experiences__image" />
+                    {experiences.map((experience, index) => {
+                        const [loading, setLoading] = React.useState(!!experience.img || !!experience.img2);
+                        const [error, setError] = React.useState(false);
+                        return (
+                            <article ref={el => articlesRef.current[index] = el} className={`experiences__article hidden-article ${index % 2 === 0 ? 'slide-left' : 'slide-right'}`} key={index}>
+                                <div className='experiences__textContainer'>
+                                    <h2 className='experiences__titleArticle' >{experience.title}</h2>
+                                    <p className='experiences__speechArticle'>{experience.speech}</p>
                                 </div>
-                                {/* Lado trasero con imagen */}
-                                <div className='experiences__images--back'>
-                                    <img src={experience.img2} alt={`Imagen sobre ${experience.title}`} className="experiences__image" />
+                                <div className='experiences__imgArticle experiences__imgArticle--section3'>
+                                    <div className='experiences__images--front'>
+                                        {loading && <div className='experiences__animation'><LoadAnimation /></div>}
+                                        {error && <p className="errorMessage">No se pudo cargar la imagen</p>}
+                                        {experience.img && !error && (<img onLoad={() => setLoading(false)} src={experience.img} alt={`Imagen de niño escavando`} className="experiences__image" />)}
+                                    </div>
+                                    {/* Lado trasero con imagen */}
+                                    <div className='experiences__images--back'>
+                                        {loading && <div className='experiences__animation'><LoadAnimation /></div>}
+                                        {error && <p className="errorMessage">No se pudo cargar la imagen</p>}
+                                        {experience.img2 && !error && (<img onLoad={() => setLoading(false)} src={experience.img2} alt={`Imagen sobre ${experience.title}`} className="experiences__image" />)}
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
-                    ))}
+                            </article>
+                        )
+                    })}
                 </div>
                 <div className='experience__secondArticles'>
-                    {experiences2.map((experience, index) => (
-                        <article key={index + experiences.length} ref={el => articlesRef.current[index + experiences.length] = el} className={`experiences__article hidden-article ${index % 2 === 0 ? 'slide-left' : 'slide-right'}`}>
-                            <div className='experiences__textContainer'>
-                                <h2 className='experiences__titleArticle' >{experience.title}</h2>
-                                <p className='experiences__speechArticle'>{experience.speech}</p>
-                            </div>
-                            <div className='experiences__imgArticle experiences__imgArticle--section3'>
-                                <div className='experiences__images--front'>
-                                    <img src={experience.img} alt={`Imagen de ${experience.title}`} className="experiences__image" />
+                    {experiences2.map((experience, index) => {
+                        const [loading, setLoading] = React.useState(!!experience.img || !!experience.img2);
+                        const [error, setError] = React.useState(false);
+                        return (
+                            <article key={index + experiences.length} ref={el => articlesRef.current[index + experiences.length] = el} className={`experiences__article hidden-article ${index % 2 === 0 ? 'slide-left' : 'slide-right'}`}>
+                                <div className='experiences__textContainer'>
+                                    <h2 className='experiences__titleArticle' >{experience.title}</h2>
+                                    <p className='experiences__speechArticle'>{experience.speech}</p>
                                 </div>
-                                {/* Lado trasero con imagen */}
-                                <div className='experiences__images--back'>
-                                    <img src={experience.img2} alt={`Imagen sobre ${experience.title}`} className="experiences__image" />
+                                <div className='experiences__imgArticle experiences__imgArticle--section3'>
+                                    <div className='experiences__images--front'>
+                                        {loading && <div className='experiences__animation'><LoadAnimation /></div>}
+                                        {error && <p className="errorMessage">No se pudo cargar la imagen</p>}
+                                        {experience.img && !error && (<img onLoad={() => setLoading(false)} src={experience.img} alt={`Imagen de ${experience.title}`} className="experiences__image" />)}
+                                    </div>
+                                    {/* Lado trasero con imagen */}
+                                    <div className='experiences__images--back'>
+                                        {loading && <div className='experiences__animation'><LoadAnimation /></div>}
+                                        {error && <p className="errorMessage">No se pudo cargar la imagen</p>}
+                                        {experience.img2 && !error && (<img onLoad={() => setLoading(false)} src={experience.img2} alt={`Imagen sobre ${experience.title}`} className="experiences__image" />)}
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
-                    ))}
+                            </article>
+                        )
+                    })}
                 </div>
             </section>
         </div>
