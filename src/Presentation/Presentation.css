@@ -35,7 +35,7 @@
 }
 
 .presentation__title {
-    color:  #18513D;
+    color: #18513D;
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
@@ -45,7 +45,7 @@
 }
 
 .presentation__speech {
-    color:  #AE712B;
+    color: #AE712B;
     font-size: 1.3rem;
     font-weight: 400;
     text-align: center;
@@ -55,7 +55,7 @@
 }
 
 .presentation__introSpeech {
-    color:  #AE712B;
+    color: #AE712B;
     font-size: 1.4rem;
     font-weight: 500;
     text-align: justify;
@@ -80,6 +80,26 @@
     opacity: 0.95;
 }
 
+.hidden {
+    opacity: 0;
+}
+
+/* Cuando se activa la animación */
+.animate {
+    animation: slideInLeft 1s forwards;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
 @keyframes aleteo {
 
@@ -200,7 +220,7 @@
         margin: 0 auto;
         margin-top: 3.5rem;
         width: 80%;
-        border: solid 0.2rem  #18513D;
+        border: solid 0.2rem #18513D;
         border-radius: 0.4rem;
         box-shadow: 0rem 0.4rem 2rem rgba(240, 124, 1, 0.5);
     }
@@ -231,8 +251,10 @@
     .videoContainer__presentationVideo {
         max-width: 950px;
         max-height: 300px;
-        object-fit: cover;  /* o 'fill' para estirar */
-        object-position: center;  /* Enfoca el centro del video */
+        object-fit: cover;
+        /* o 'fill' para estirar */
+        object-position: center;
+        /* Enfoca el centro del video */
     }
 
     .presentation__introSpeech {
