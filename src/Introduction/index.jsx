@@ -1,7 +1,10 @@
 import { NavLink } from 'react-router-dom';
+import React from 'react';
 import './Introduction.css'
 
 function Introduction() {
+    const [menuOpen, setMenuOpen] = React.useState(false);
+    const [activeSection, setActiveSection] = React.useState('');
     const scrollToSection = (id) => {
         const section = document.getElementById(id);
         if (section) {
@@ -16,12 +19,28 @@ function Introduction() {
             </section>
             <nav className='navBar'>
                 <ul className='nabBar__list'>
-                    <li className='nabBar__item'><NavLink to='/' onClick={() => scrollToSection('presentation')}>Quiénes somos</NavLink></li>
-                    <li className='nabBar__item'><NavLink to='/' onClick={() => scrollToSection('services')}>Nuestra propuesta</NavLink></li>
-                    <li className='nabBar__item'><NavLink to="/experiencias">Experiencias personalizadas</NavLink></li>
-                    <li className='nabBar__item'><NavLink to="/servicios">Programas</NavLink></li>
-                    <li className='nabBar__item'><NavLink to='/testimonios' onClick={() => scrollToSection('voces')}>Testimonios</NavLink></li>
-                    <li className='nabBar__item'><NavLink to='/solicitaInformacion'>Solicita información</NavLink></li>
+                    <li
+                        className={`nabBar__item menu-principal ${activeSection === 'menu' ? 'nabBar__item--focus' : ''}`}
+                        onMouseEnter={() => setMenuOpen(true)}
+                        onMouseLeave={() => setMenuOpen(false)}
+                        onClick={() => {setActiveSection('menu'); setMenuOpen(true)}}
+                    >
+                        <NavLink to="/">Menú Principal</NavLink>
+                        {menuOpen && (
+                            <ul className="submenu">
+                                <li className='nabBar__item'><NavLink to="/" onClick={() => scrollToSection('presentation')}>Quiénes somos</NavLink></li>
+                                <li className='nabBar__item'><NavLink to="/" onClick={() => scrollToSection('services')}>Nuestra propuesta</NavLink></li>
+                            </ul>
+                        )}
+                    </li>
+                    <li className={`nabBar__item ${activeSection === 'experiencias' ? 'nabBar__item--focus' : ''}`}
+                        onClick={() => setActiveSection('experiencias')}><NavLink to="/experiencias">Experiencias personalizadas</NavLink></li>
+                    <li className={`nabBar__item ${activeSection === 'programas' ? 'nabBar__item--focus' : ''}`}
+                        onClick={() => setActiveSection('programas')}><NavLink to="/servicios">Programas</NavLink></li>
+                    <li className={`nabBar__item ${activeSection === 'voces' ? 'nabBar__item--focus' : ''}`}
+                        onClick={() => { setActiveSection('voces'); scrollToSection('voces'); }}><NavLink to='/testimonios'>Testimonios</NavLink></li>
+                    <li className={`nabBar__item ${activeSection === 'solicita' ? 'nabBar__item--focus' : ''}`}
+                        onClick={() => setActiveSection('solicita')}><NavLink to='/solicitaInformacion'>Solicita información</NavLink></li>
                 </ul>
             </nav>
         </>

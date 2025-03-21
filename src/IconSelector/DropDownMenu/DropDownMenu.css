@@ -78,6 +78,39 @@
   height: 4.2rem;
 }
 
+.dropMenu--menu-principal {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropMenu__item--focus a{
+  text-decoration: underline white 0.2rem;
+}
+
+.dropMenu--submenu {
+  position: relative;
+  top: 100%;
+  left: 0;
+  list-style: disc; /* Mantiene las viñetas */
+  list-style-position: inside; /* Asegura que las viñetas estén dentro del contenedor */
+  padding: 0rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  color: white;
+}
+
+.dropMenu--submenu li {
+  padding: 0.5rem 1rem;
+  text-align: left;
+}
+
+.dropMenu--submenu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.55rem;
+}
+
 @media (min-width: 700px) {
   .buttonMenu {
     display: none;
