@@ -1,0 +1,45 @@
+.Icon-purpleHexagon {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: -7.5rem;
+    overflow: hidden;
+    bottom: 26rem;
+    opacity: 50%;
+}
+
+.Icon-purpleHexagon svg{
+    width: 15rem;
+}
+
+@media (min-width: 800px) {
+    .Icon-purpleHexagon {
+        right: -5rem;
+        bottom: 30rem;
+    }
+    .Icon-purpleHexagon svg{
+        width: 17rem;
+    }
+}
+
+@media (min-width: 1300px) {
+    .Icon-purpleHexagon {
+        right: 1rem;
+        bottom: 28.4rem;
+    }
+    .Icon-purpleHexagon svg{
+        width: 20rem;
+    }
+}
+
+@media (min-width: 1600px) {
+    .Icon-purpleHexagon {
+        right: 15rem;
+    }
+}
+
+@media (min-width: 1900px) {
+    .Icon-purpleHexagon {
+        right: 25rem;
+    }
+}

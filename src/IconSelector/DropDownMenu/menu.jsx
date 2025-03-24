@@ -5,9 +5,8 @@ import './DropDownMenu.css';
 import { CloseIcon } from '../CloseIcon';
 
 function Menu() {
-  const { shouldRenderMenu, animateMenuIn, closeMenu } = React.useContext(LandingContext);
+  const { shouldRenderMenu, animateMenuIn, closeMenu, activeSection2, setActiveSection2 } = React.useContext(LandingContext);
   const [menuOpen, setMenuOpen] = React.useState(false);
-  const [activeSection, setActiveSection] = React.useState('');
 
   if (!shouldRenderMenu) return null;
 
@@ -31,10 +30,10 @@ function Menu() {
         <CloseIcon />
         <ul className='dropMenu__list'>
           <li
-            className={`dropMenu__item dropMenu--menu-principal ${activeSection === 'menu' ? 'dropMenu__item--focus' : ''}`}
+            className={`dropMenu__item dropMenu--menu-principal ${activeSection2 === 'menu' ? 'dropMenu__item--focus' : ''}`}
             onMouseEnter={() => setMenuOpen(true)}
             onMouseLeave={() => setMenuOpen(false)}
-            onClick={() => { setActiveSection('menu'); setMenuOpen(true) }}
+            onClick={() => { setActiveSection2('menu'); setMenuOpen(true) }}
           >
             <NavLink to="/">Menú Principal</NavLink>
             {menuOpen && (
@@ -44,20 +43,20 @@ function Menu() {
               </ul>
             )}
           </li>
-          <li className={`dropMenu__item dropMenu__item--lastBorder ${activeSection === 'experiencias' ? 'dropMenu__item--focus' : ''}`}
-            onClick={() => setActiveSection('experiencias')}>
+          <li className={`dropMenu__item dropMenu__item--lastBorder ${activeSection2 === 'experiencias' ? 'dropMenu__item--focus' : ''}`}
+            onClick={() => setActiveSection2('experiencias')}>
             <NavLink to="/experiencias" onClick={() => clickIcon('')}>Experiencias personalizadas</NavLink>
           </li>
-          <li className={`dropMenu__item dropMenu__item--lastBorder ${activeSection === 'programas' ? 'dropMenu__item--focus' : ''}`}
-            onClick={() => setActiveSection('programas')}>
+          <li className={`dropMenu__item dropMenu__item--lastBorder ${activeSection2 === 'programas' ? 'dropMenu__item--focus' : ''}`}
+            onClick={() => setActiveSection2('programas')}>
             <NavLink to="/servicios" onClick={() => clickIcon('')}>Programas</NavLink>
           </li>
-          <li className={`dropMenu__item dropMenu__item--lastBorder ${activeSection === 'testimonios' ? 'dropMenu__item--focus' : ''}`}
-            onClick={() => setActiveSection('testimonios')}>
+          <li className={`dropMenu__item dropMenu__item--lastBorder ${activeSection2 === 'testimonios' ? 'dropMenu__item--focus' : ''}`}
+            onClick={() => setActiveSection2('testimonios')}>
             <NavLink to='/testimonios' onClick={() => clickIcon('voces')}>Testimonios</NavLink>
           </li>
-          <li className={`dropMenu__item dropMenu__item--lastBorder ${activeSection === 'informacion' ? 'dropMenu__item--focus' : ''}`}
-            onClick={() => setActiveSection('informacion')}>
+          <li className={`dropMenu__item dropMenu__item--lastBorder ${activeSection2 === 'informacion' ? 'dropMenu__item--focus' : ''}`}
+            onClick={() => setActiveSection2('informacion')}>
             <NavLink to="/solicitaInformacion" onClick={() => clickIcon('')}>Solicita Informacion</NavLink>
           </li>
         </ul>

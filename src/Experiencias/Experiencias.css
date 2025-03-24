@@ -25,10 +25,22 @@
   border-radius: 0.4rem;
   text-align: left;
   color: white;
-  background-color: rgba(38, 125, 94, 0.8);
   box-shadow: 0rem 0.4rem 0.8rem rgba(0, 0, 0, 16%);
   margin: 1.5rem;
   min-height: 45.5rem;
+}
+
+.experiences__article--educacion {
+  background-color: #A38AC1;
+}
+.experiences__article--experiencias {
+  background-color: #FE8A01;
+}
+.experiences__article--bienestar {
+  background-color: #03AF98;
+}
+.experiences__article--alianzas {
+  background-color: #E85E2F;
 }
 
 .experiences__textContainer {
@@ -44,7 +56,7 @@
 
 .experiences__speechArticle {
   font-size: 1.5rem;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 .experiences__imgArticle {

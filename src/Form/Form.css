@@ -75,6 +75,10 @@
     /* Inicialmente ocultos */
 }
 
+.socialMedia__contactIcon img {
+    width: 5rem;
+}
+
 /* Animación de entrada */
 @keyframes slideInFromRight {
     from {
@@ -99,6 +103,10 @@
 
 .socialMedia.animate .socialMedia__contactIcon:nth-child(3) {
     animation: slideInFromRight 0.5s ease-out 0.9s forwards;
+}
+
+.socialMedia.animate .socialMedia__contactIcon:nth-child(4) {
+    animation: slideInFromRight 0.5s ease-out 1.2s forwards;
 }
 
 @media (min-width: 700px) {

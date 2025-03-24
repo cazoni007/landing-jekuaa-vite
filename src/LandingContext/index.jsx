@@ -4,6 +4,7 @@ import React, { useState, useRef, useMemo } from "react";
 import tiktok from './Media/tiktok-logo.png'
 import facebook from './Media/facebook-logo.png'
 import whatsApp from './Media/whatsapp-logo.png'
+import instagram from './Media/Instagram-logo.png'
 
 //Presentation Component
 import videoSrc from "./Media/presentationPhone.mp4";
@@ -62,6 +63,10 @@ function LandingProvider({ children }) {
         setLoadingPresentation(false);
         setErrorPresentation(true);
     };
+
+    //Estados para underline del navBar
+    const [activeSection, setActiveSection] = React.useState('');
+    const [activeSection2, setActiveSection2] = React.useState('');
 
     const setTrue = () => (
         setUpArrowInvisible(true)
@@ -146,12 +151,14 @@ function LandingProvider({ children }) {
         speech: 'Explora y aprende con actividades diseñadas para complementar el currículo escolar, potenciando la creatividad, el trabajo en equipo y la conexión con la naturaleza. Cada actividad está pensada para que los estudiantes se sumerjan en un entorno vivo y se involucren activamente en su proceso educativo.',
         img: estudiantesNaturaleza,
         img2: estudiantesNaturaleza2,
+        color: 'experiences__article--educacion',
     },
     {
         title: 'Experiencias familiares en el bosque',
         speech: 'Disfruta momentos inolvidables en familia con talleres creativos, caminatas guiadas y actividades que fomentan el aprendizaje y el bienestar. Un día en el bosque se transforma en una experiencia de unión, donde cada miembro descubre la magia de la naturaleza.',
         img: senorasSentadas,
         img2: ninosAbeja,
+        color: 'experiences__article--experiencias',
     },]
 
     const experiences2 = [
@@ -160,12 +167,14 @@ function LandingProvider({ children }) {
             speech: 'Renueva a tu equipo o grupo de estudiantes con dinámicas al aire libre que promueven la colaboración, el liderazgo y la conexión. En un entorno natural único, las actividades fortalecen el espíritu de equipo y estimulan la creatividad para enfrentar desafíos.',
             img: ninoEscavando,
             img2: jovenMirando,
+            color: 'experiences__article--bienestar',
         },
         {
             title: 'Alianzas estratégicas y experiencias personalizadas',
             speech: 'Trabajemos juntos para diseñar experiencias a medida que generen impacto social y ambiental, alineadas con los valores de tu organización.Cada proyecto se adapta a tus necesidades, creando soluciones innovadoras y transformadoras en contacto directo con la naturaleza.',
             img: empresaComiendo,
             img2: empresaCharla,
+            color: 'experiences__article--alianzas',
         },
     ]
 
@@ -177,6 +186,7 @@ function LandingProvider({ children }) {
         setStateFalse: setFalse,
         img: ninosPlantando,
         img2: explicandoAbejas,
+        header: 'pack__articleTitle--aventureros',
     },
     {
         title: 'Jekuaá Innovadores',
@@ -186,6 +196,7 @@ function LandingProvider({ children }) {
         setStateFalse: setFalse2,
         img: ninosArte,
         img2: ninosViendoFrascos,
+        header: 'pack__articleTitle--innovadores',
     },
     {
         title: 'Jekuaá Creadores',
@@ -195,6 +206,7 @@ function LandingProvider({ children }) {
         setStateFalse: setFalse3,
         img: ninoCocinando,
         img2: ninosCocinando,
+        header: 'pack__articleTitle--creadores',
     },
     {
         title: 'Jekuaá Guardianes',
@@ -205,7 +217,7 @@ function LandingProvider({ children }) {
         setStateFalse: setFalse4,
         img: jovenesAlimentando,
         img2: ninoConejo,
-        bonus: 'pack__articleTitle--bonus'
+        header: 'pack__articleTitle--bonus'
     },]
 
     const propuestas = [{
@@ -254,6 +266,7 @@ function LandingProvider({ children }) {
         tiktok,
         facebook,
         whatsApp,
+        instagram,
         logo,
         videoSrc,
         videoSrcPc,
@@ -265,6 +278,10 @@ function LandingProvider({ children }) {
         setIsDesktop,
         handleVideoErrorPresentation,
         propuestas,
+        activeSection,
+        setActiveSection,
+        activeSection2,
+        setActiveSection2
     }), [menuVisible, shouldRenderMenu, animateMenuIn, testimonials, experiences, experiences2, isPaused]);
 
     return (

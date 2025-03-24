@@ -1,6 +1,6 @@
 .introduction {
     padding: 2rem 0;
-    background-color: #30916f;
+    background-color: #18513D;
     color: white;
 }
 
@@ -33,7 +33,7 @@
 
 .submenu {
     position: absolute;
-    background: #30916f;
+    background: #18513D;
     top: 100%;
     left: 0;
     list-style: none;
@@ -70,7 +70,7 @@
     }
     .navBar {
         display: block;
-        background-color: #30916f;
+        background-color: #18513D;
         padding: 2rem 0;
 
     }

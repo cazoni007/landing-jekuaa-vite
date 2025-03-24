@@ -3,7 +3,7 @@ import React, { useContext } from 'react'
 import { LandingContext } from '../LandingContext'
 
 function Form() {
-    const {tiktok, facebook, whatsApp} = useContext(LandingContext);
+    const {tiktok, facebook, whatsApp, instagram} = useContext(LandingContext);
     const [isVisible, setIsVisible] = React.useState(false);
     const formRef = React.useRef(null);
 
@@ -63,7 +63,8 @@ function Form() {
                 <button className='form__buttomSubmit' type="submit" ref={formRef}>Enviar</button>
                 <div className={`socialMedia ${isVisible ? 'animate' : ''}`}>
                     <a href='https://www.facebook.com/JekuaaBosqueEscuela' target="_blank" rel="noopener noreferrer" className='socialMedia__contactIcon'><img src={facebook} alt='facebook icon'></img></a>
-                    <a href='https://www.instagram.com/jekuaaurubo/?igsh=MzZvdHQyaHZwazhs' target="_blank" rel="noopener noreferrer" className='socialMedia__contactIcon'><img src={tiktok} alt='tiktok icon'></img></a>
+                    <a href='https://www.instagram.com/jekuaabosqueescuela?igsh=MzZvdHQyaHZwazhs' target="_blank" rel="noopener noreferrer" className='socialMedia__contactIcon'><img src={instagram} alt='instagram icon'></img></a>
+                    <a href='https://www.tiktok.com/@jekuaaurubo?_t=ZM-8uwhAzHrHTb&_r=1' target="_blank" rel="noopener noreferrer" className='socialMedia__contactIcon'><img src={tiktok} alt='tiktok icon'></img></a>
                     <a href='https://api.whatsapp.com/send/?phone=59178453442&text&type=phone_number&app_absent=0' target="_blank" rel="noopener noreferrer" className='socialMedia__contactIcon'><img src={whatsApp} alt='whatsapp icon'></img></a>
                 </div>
             </form>

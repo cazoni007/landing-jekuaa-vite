@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import './Services.css'
 
 function Services() {
-    const {propuestas} = React.useContext(LandingContext);
+    const {propuestas, activeSection, setActiveSection, activeSection2, setActiveSection2} = React.useContext(LandingContext);
     return (
         <section className='services' id='services'>
             <h2 className='services__title'>Nuestra propuesta:<br />Conectar, Educar y Transformar</h2>
@@ -26,7 +26,7 @@ function Services() {
                     </article>
                 ))}
             </div>
-            <NavLink className='services__button--a' to='/experiencias'><button className='services__button'>Nuestras experiencias diseñadas para ti</button></NavLink>
+            <NavLink className={`services__button--a ${activeSection && activeSection2 === 'experiencias' ? 'nabBar__item--focus dropMenu__item--focus' : ''}`} to='/experiencias' onClick={() => {setActiveSection('experiencias'); setActiveSection2('experiencias')}}><button className='services__button'>Nuestras experiencias diseñadas para ti</button></NavLink>
         </section>
     )
 }

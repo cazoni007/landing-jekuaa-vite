@@ -46,8 +46,8 @@ function Pack() {
 
                     return (
                         <article ref={el => articlesRef.current[index] = el} className='pack__article hidden' key={index}>
-                            <div className='pack__headerContainer' onClick={() => service.state ? service.setStateFalse() : service.setStateTrue()}>
-                                <h1 className={`pack__articleTitle ${service.bonus}`}>{service.title}</h1>
+                            <div className={`pack__headerContainer`} onClick={() => service.state ? service.setStateFalse() : service.setStateTrue()}>
+                                <h1 className={`pack__articleTitle ${service.header}`}>{service.title}</h1>
                                 <span className={`Icon-upArrow ${service.state ? "invisible" : ""}`}><UpArrow /></span>
                                 <span className={`Icon-downArrow ${!service.state ? "invisible" : ""}`}><DownArrow /></span>
                             </div>

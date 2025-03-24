@@ -48,7 +48,7 @@ function Experiences() {
                         const [loading, setLoading] = React.useState(!!experience.img || !!experience.img2);
                         const [error, setError] = React.useState(false);
                         return (
-                            <article ref={el => articlesRef.current[index] = el} className={`experiences__article hidden-article ${index % 2 === 0 ? 'slide-left' : 'slide-right'}`} key={index}>
+                            <article ref={el => articlesRef.current[index] = el} className={`experiences__article ${experience.color} hidden-article ${index % 2 === 0 ? 'slide-left' : 'slide-right'}`} key={index}>
                                 <div className='experiences__textContainer'>
                                     <h2 className='experiences__titleArticle' >{experience.title}</h2>
                                     <p className='experiences__speechArticle'>{experience.speech}</p>
@@ -75,7 +75,7 @@ function Experiences() {
                         const [loading, setLoading] = React.useState(!!experience.img || !!experience.img2);
                         const [error, setError] = React.useState(false);
                         return (
-                            <article key={index + experiences.length} ref={el => articlesRef.current[index + experiences.length] = el} className={`experiences__article hidden-article ${index % 2 === 0 ? 'slide-left' : 'slide-right'}`}>
+                            <article key={index + experiences.length} ref={el => articlesRef.current[index + experiences.length] = el} className={`experiences__article ${experience.color} hidden-article ${index % 2 === 0 ? 'slide-left' : 'slide-right'}`}>
                                 <div className='experiences__textContainer'>
                                     <h2 className='experiences__titleArticle' >{experience.title}</h2>
                                     <p className='experiences__speechArticle'>{experience.speech}</p>

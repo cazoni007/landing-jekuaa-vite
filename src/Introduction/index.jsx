@@ -1,10 +1,11 @@
 import { NavLink } from 'react-router-dom';
+import { LandingContext } from '../LandingContext';
 import React from 'react';
 import './Introduction.css'
 
 function Introduction() {
     const [menuOpen, setMenuOpen] = React.useState(false);
-    const [activeSection, setActiveSection] = React.useState('');
+    const {activeSection, setActiveSection} = React.useContext(LandingContext);
     const scrollToSection = (id) => {
         const section = document.getElementById(id);
         if (section) {

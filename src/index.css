@@ -14,19 +14,6 @@ html {
 
 body {
   font-size: 1.6rem;
-  /* background:
-    linear-gradient(rgba(244, 244, 244, 0.85), rgba(232, 232, 232, 0.95)),
-    /* Capa de color encima
-    url('./fondoOptimize.jpg');
-  /* Imagen de fondo */
-
-  background:
-    linear-gradient(rgba(252, 240, 255, 0.80), rgba(251, 241, 255, 0.90)),
-    /* Capa de color encima */
-    url('./fondo-optimize.png') center/cover no-repeat;
-  /* Imagen de fondo */
-  background-attachment: fixed;
-  /* Fija el fondo mientras se desplaza */
 }
 
 .app-wrapper {

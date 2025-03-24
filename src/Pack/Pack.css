@@ -9,7 +9,7 @@
     color: #AE712B;
     padding: 0rem 1.5rem;
     padding-bottom: 1.5rem;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 400;
     text-align: center;
 }
@@ -49,10 +49,11 @@
     border-radius: 0 0 0.4rem 0.4rem;
     text-align: left;
     color: white;
-    background-color: rgba(24, 81, 61, 0.8);
+    background-color: #18513D;
     box-shadow: 0rem 0.4rem 0.8rem rgba(0, 0, 0, 16%);
     margin: 0rem 1.5rem 1.5rem 1.5rem;
-    min-height: 47.4rem;
+    padding-bottom: 1.5rem;
+    height: fit-content;
     transition: transform 0.5s ease, opacity 0.5s ease;
     transform: translateY(0);
     opacity: 1;
@@ -68,7 +69,6 @@
     font-size: 1.8rem;
     padding: 1.5rem 1rem;
     color: white;
-    background-color: #03AF98;
     text-align: center;
     border-radius: 0.4rem 0.4rem 0 0;
 }
@@ -76,10 +76,19 @@
 .pack__articleTitle--bonus {
     background-color: #FE8A01;
 }
+.pack__articleTitle--aventureros {
+    background-color: #A38AC1;
+}
+.pack__articleTitle--innovadores {
+    background-color: #93D352 ;
+}
+.pack__articleTitle--creadores {
+    background-color: #03AF98;
+}
 
 .pack__articleText {
     padding: 1.5rem;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 200;
 }
 
@@ -197,11 +206,7 @@
     }
 
     .pack__articleText {
-        font-size: 1.6rem;
-    }
-
-    .pack__contentContainer {
-        min-height: 50rem;
+        font-size: 1.8rem;
     }
 }
 
@@ -227,11 +232,11 @@
     }
 
     .pack__articleText {
-        font-size: 1.8rem;
+        font-weight: 230;
     }
 
-    .pack__contentContainer {
-        min-height: 52.5rem;
+    .pack__articleText--bonus {
+        font-weight: 900;
     }
 }
 

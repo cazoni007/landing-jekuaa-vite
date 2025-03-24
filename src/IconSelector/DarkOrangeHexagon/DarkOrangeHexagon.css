@@ -1,0 +1,50 @@
+.Icon-darkOrangeHexagon {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: -8rem;
+    overflow: hidden;
+    top: 10rem;
+    opacity: 50%;
+}
+
+.Icon-darkOrangeHexagon svg {
+    width: 16rem;
+}
+
+@media (min-width: 800px) {
+    .Icon-darkOrangeHexagon {
+        left: 0rem;
+        top: 12rem;
+    }
+
+    .Icon-darkOrangeHexagon svg {
+        width: 19rem;
+    }
+}
+
+@media (min-width: 1300px) {
+    .Icon-darkOrangeHexagon {
+        left: -1rem;
+    }
+
+    .Icon-darkOrangeHexagon svg {
+        width: 21rem;
+    }
+}
+
+@media (min-width: 1600px) {
+    .Icon-darkOrangeHexagon {
+        left: 10rem;
+    }
+
+    .Icon-darkOrangeHexagon svg {
+        width: 24rem;
+    }
+}
+
+@media (min-width: 1900px) {
+    .Icon-darkOrangeHexagon {
+        left: 20rem;
+    }
+}
