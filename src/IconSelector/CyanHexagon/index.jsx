@@ -1,9 +1,9 @@
 import { IconSelector } from '..'
 import './CyanHexagon.css'
 
-function CyanHexagon() {
+function CyanHexagon({extra}) {
     return (
-        <IconSelector type={"cyanHexagon"} extra={"Icon-cyanHexagon--size"}/>
+        <IconSelector type={"cyanHexagon"} extra={extra ? extra : ""}/>
     )
 }
 

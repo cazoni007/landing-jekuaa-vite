@@ -123,12 +123,35 @@
     width: 3.2rem;
 }
 
-.hexagon {
+.services__hexagon {
     clip-path: polygon(35% 5%, 65% 5%, 90% 50%, 65% 95%, 35% 95%, 10% 50%);
     overflow: hidden;
     /* Asegura que la imagen se recorte correctamente */
     position: relative;
     /* Para posicionar adornos si es necesario */
+}
+
+.services__darkOrangeHexagon {
+    z-index: 1;
+    left: -3rem;
+}
+.services__darkOrangeHexagon svg {
+    width: 14rem;
+}
+
+.services__yellowHexagon {
+    right: 1rem;
+}
+
+.services__yellowHexagon svg {
+    width: 11rem;
+}
+
+.services__cyanHexagon {
+    right: -3rem
+}
+.services__cyanHexagon svg{
+    width: 15rem;
 }
 
 @keyframes breath {

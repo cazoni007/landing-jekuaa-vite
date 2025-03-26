@@ -27,18 +27,21 @@
   color: white;
   box-shadow: 0rem 0.4rem 0.8rem rgba(0, 0, 0, 16%);
   margin: 1.5rem;
-  min-height: 45.5rem;
+  height: fit-content;
 }
 
 .experiences__article--educacion {
   background-color: #A38AC1;
 }
+
 .experiences__article--experiencias {
   background-color: #FE8A01;
 }
+
 .experiences__article--bienestar {
   background-color: #03AF98;
 }
+
 .experiences__article--alianzas {
   background-color: #E85E2F;
 }
@@ -61,7 +64,10 @@
 
 .experiences__imgArticle {
   margin-top: 1.5rem;
-  min-height: 25rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
   /* Ajusta según contenido */
   transform-style: preserve-3d;
 }
@@ -72,15 +78,13 @@
 
 .experiences__images--front,
 .experiences__images--back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   backface-visibility: hidden;
 }
-
+.experiences__images--front {
+  position: absolute;
+}
 .experiences__images--back {
+  position: relative;
   transform: rotateY(180deg);
   /* Hace que el lado trasero aparezca después del giro */
 }
@@ -98,7 +102,7 @@
 .experiences__animation .icon-tree circle,
 .experiences__animation .Icon-leaf svg,
 .experiences__animation .Icon-leaf2 svg {
-    fill: #ffffff;
+  fill: #ffffff;
 }
 
 /* Estado inicial: los artículos están opacos */
@@ -115,6 +119,13 @@
   animation: slideInRight 1s forwards;
 }
 
+.experiences__hexagon {
+  clip-path: polygon(35% 5%, 65% 5%, 90% 50%, 65% 95%, 35% 95%, 10% 50%);
+  overflow: hidden;
+  /* Asegura que la imagen se recorte correctamente */
+  position: relative;
+  /* Para posicionar adornos si es necesario */
+}
 
 @media (min-width: 700px) {
 

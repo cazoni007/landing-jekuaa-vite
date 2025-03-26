@@ -26,8 +26,10 @@ function Services() {
 
                         {/* Lado trasero con imagen */}
                         <div className='services__back'>
-                            <YellowHexagon />
-                            <div className='hexagon'>
+                            <YellowHexagon extra={'services__yellowHexagon'}/>
+                            <CyanHexagon extra={'services__cyanHexagon'}/>
+                            <DarkOrangeHexagon extra={'services__darkOrangeHexagon'}/>
+                            <div className='services__hexagon'>
                                 <img src={service.image} alt={`Imagen de ${service.title}`} className="services__image" />
                             </div>
                         </div>
