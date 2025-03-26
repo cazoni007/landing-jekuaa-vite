@@ -91,6 +91,243 @@
     animation: slideInLeft 1s forwards;
 }
 
+.presentation__cyanHexagon {
+    right: -10rem;
+    bottom: 9.5rem;
+}
+.presentation__cyanHexagon svg {
+    width: 20rem;
+}
+
+.presentation__yellowHexagon {
+    right: -6rem;
+    bottom: 0rem;
+}
+.presentation__yellowHexagon svg {
+    width: 12rem;
+}
+
+.presentation__purpleHexagon {
+    right: -7.5rem;
+    bottom: 26rem;
+}
+.presentation__purpleHexagon svg {
+    width: 15rem;
+}
+
+.presentation__lightOrangeHexagon {
+    left: -5rem;
+    top: 2rem;
+}
+.presentation__lightOrangeHexagon svg {
+    width: 10rem;
+}
+
+.presentation__darkOrangeHexagon {
+    left: -8rem;
+    top: 10rem;
+}
+.presentation__darkOrangeHexagon svg {
+    width: 16rem;
+}
+
+@media (min-width: 700px) {
+    .presentation__introSpeech {
+        font-size: 1.6rem;
+    }
+
+    .presentation__title {
+        font-size: 2.2rem;
+    }
+
+    .presentation__speech {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 800px) {
+    .videoContainer__presentationVideo {
+        display: block;
+        margin: 0 auto;
+        margin-top: 3.5rem;
+        width: 80%;
+        border: solid 0.2rem #18513D;
+        border-radius: 0.4rem;
+        box-shadow: 0rem 0.4rem 2rem rgba(240, 124, 1, 0.5);
+    }
+
+    .presentation__introSpeech {
+        display: block;
+        margin: auto;
+        padding: 0;
+        width: 80%;
+        font-size: 1.8rem;
+    }
+
+    .presentation__title {
+        font-size: 2.4rem;
+    }
+
+    .presentation__speech {
+        display: block;
+        margin: auto;
+        padding: 0;
+        width: 80%;
+        font-size: 1.7rem;
+    }
+
+    .presentation__cyanHexagon {
+        right: -6rem;
+        bottom: 11rem;
+    }
+    .presentation__cyanHexagon svg {
+        width: 22rem;
+    }
+
+    .presentation__darkOrangeHexagon {
+        left: 0rem;
+        top: 12rem;
+    }
+    .presentation__darkOrangeHexagon svg {
+        width: 19rem;
+    }
+
+    .presentation__lightOrangeHexagon {
+        left: -2rem;
+        top: 2rem;
+    }
+
+    .presentation__purpleHexagon {
+        right: -5rem;
+        bottom: 30rem;
+    }
+    .presentation__purpleHexagon svg {
+        width: 17rem;
+    }
+
+    .presentation__yellowHexagon {
+        right: 5rem;
+    }
+    .presentation__yellowHexagon svg {
+        width: 14rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    .videoContainer__presentationVideo {
+        max-width: 950px;
+        max-height: 300px;
+        object-fit: cover;
+        /* o 'fill' para estirar */
+        object-position: center;
+        /* Enfoca el centro del video */
+    }
+
+    .presentation__introSpeech {
+        max-width: 950px;
+        font-size: 2rem;
+    }
+
+    .presentation__abejaImg {
+        width: 3.4rem;
+    }
+
+    .presentation__title {
+        font-size: 2.6rem;
+    }
+
+    .presentation__speech {
+        max-width: 950px;
+        font-size: 1.9rem;
+    }
+}
+
+@media (min-width: 1300px) {
+    .presentation__cyanHexagon {
+        right: 1rem;
+        bottom: 9.6rem;
+    }
+    .presentation__cyanHexagon svg {
+        width: 25rem;
+    }
+
+    .presentation__darkOrangeHexagon {
+        left: -1rem;
+    }
+    .presentation__darkOrangeHexagon svg {
+        width: 21rem;
+    }
+
+    .presentation__lightOrangeHexagon {
+        left: 1rem;
+    }
+    .presentation__lightOrangeHexagon svg {
+        width: 13rem;
+    }
+
+    .presentation__purpleHexagon {
+        right: 1rem;
+        bottom: 28.4rem;
+    }
+    .presentation__purpleHexagon svg {
+        width: 20rem;
+    }
+
+    .presentation__yellowHexagon {
+        right: 1rem;
+    }
+}
+
+@media (min-width: 1600px) {
+    .presentation__cyanHexagon {
+        right: 10rem;
+    }
+
+    .presentation__darkOrangeHexagon {
+        left: 10rem;
+    }
+    .presentation__darkOrangeHexagon svg {
+        width: 24rem;
+    }
+
+    .presentation__lightOrangeHexagon {
+        left: 20rem;
+    }
+    .presentation__lightOrangeHexagon svg {
+        width: 14rem;
+    }
+
+    .presentation__purpleHexagon {
+        right: 15rem;
+    }
+
+    .presentation__yellowHexagon {
+        right: 25rem;
+    }
+}
+
+@media (min-width: 1900px) {
+    .presentation__cyanHexagon {
+        right: 20rem;
+    }
+
+    .presentation__darkOrangeHexagon {
+        left: 20rem;
+    }
+
+    .presentation__lightOrangeHexagon {
+        left: 30rem;
+    }
+
+    .presentation__purpleHexagon {
+        right: 25rem;
+    }
+
+    .presentation__yellowHexagon {
+        right: 35rem;
+    }
+}
+
 @keyframes slideInLeft {
     from {
         transform: translateX(-50%);
@@ -213,81 +450,5 @@
             translateY(1rem) scale(1.2) rotate(5deg) rotateZ(15deg) rotateX(15deg);
         /* Inclinación */
         z-index: 2;
-    }
-}
-
-@media (min-width: 700px) {
-    .presentation__introSpeech {
-        font-size: 1.6rem;
-    }
-
-    .presentation__title {
-        font-size: 2.2rem;
-    }
-
-    .presentation__speech {
-        font-size: 1.5rem;
-    }
-}
-
-@media (min-width: 800px) {
-    .videoContainer__presentationVideo {
-        display: block;
-        margin: 0 auto;
-        margin-top: 3.5rem;
-        width: 80%;
-        border: solid 0.2rem #18513D;
-        border-radius: 0.4rem;
-        box-shadow: 0rem 0.4rem 2rem rgba(240, 124, 1, 0.5);
-    }
-
-    .presentation__introSpeech {
-        display: block;
-        margin: auto;
-        padding: 0;
-        width: 80%;
-        font-size: 1.8rem;
-    }
-
-    .presentation__title {
-        font-size: 2.4rem;
-    }
-
-    .presentation__speech {
-        display: block;
-        margin: auto;
-        padding: 0;
-        width: 80%;
-        font-size: 1.7rem;
-    }
-
-}
-
-@media (min-width: 1000px) {
-    .videoContainer__presentationVideo {
-        max-width: 950px;
-        max-height: 300px;
-        object-fit: cover;
-        /* o 'fill' para estirar */
-        object-position: center;
-        /* Enfoca el centro del video */
-    }
-
-    .presentation__introSpeech {
-        max-width: 950px;
-        font-size: 2rem;
-    }
-
-    .presentation__abejaImg {
-        width: 3.4rem;
-    }
-
-    .presentation__title {
-        font-size: 2.6rem;
-    }
-
-    .presentation__speech {
-        max-width: 950px;
-        font-size: 1.9rem;
     }
 }

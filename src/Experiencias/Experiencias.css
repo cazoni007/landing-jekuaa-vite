@@ -28,6 +28,7 @@
   box-shadow: 0rem 0.4rem 0.8rem rgba(0, 0, 0, 16%);
   margin: 1.5rem;
   height: fit-content;
+  overflow: hidden;
 }
 
 .experiences__article--educacion {
@@ -80,9 +81,11 @@
 .experiences__images--back {
   backface-visibility: hidden;
 }
+
 .experiences__images--front {
   position: absolute;
 }
+
 .experiences__images--back {
   position: relative;
   transform: rotateY(180deg);
@@ -127,6 +130,56 @@
   /* Para posicionar adornos si es necesario */
 }
 
+.experiences__upRightHexagon {
+  right: -1rem;
+  bottom: 13rem;
+  z-index: 1;
+}
+
+.experiences__upRightHexagon svg {
+  width: 12rem;
+}
+
+.experiences__downRightHexagon {
+  right: -4rem;
+  bottom: 0rem;
+}
+
+.experiences__downRightHexagon svg {
+  width: 15rem;
+}
+
+.experiences__upLeftHexagon {
+  left: -1rem;
+  bottom: 10;
+}
+
+.experiences__upLeftHexagon svg {
+  width: 14rem;
+}
+
+.experiences__hexagonAnimation {
+  animation: flipAnimation2 12s ease-in-out infinite;
+}
+
+@media (min-width: 500px) {
+  .experiences__upRightHexagon {
+    bottom: 25rem;
+  }
+
+  .experiences__upRightHexagon svg {
+    width: 15rem;
+  }
+
+  .experiences__downRightHexagon svg {
+    width: 18rem;
+  }
+
+  .experiences__upLeftHexagon svg {
+    width: 17rem;
+  }
+}
+
 @media (min-width: 700px) {
 
   .experience__firstArticles,
@@ -160,6 +213,23 @@
   .experiences__speechArticle {
     font-size: 1.8rem;
   }
+
+  .experiences__upRightHexagon {
+    right: -1rem;
+    bottom: 13rem;
+  }
+
+  .experiences__upRightHexagon svg {
+    width: 12rem;
+  }
+
+  .experiences__downRightHexagon svg {
+    width: 15rem;
+  }
+
+  .experiences__upLeftHexagon svg {
+    width: 14rem;
+  }
 }
 
 
@@ -184,6 +254,45 @@
 
   .experiences__subtitle {
     font-size: 2rem;
+  }
+
+  .experiences__upRightHexagon {
+    bottom: 25rem;
+  }
+
+  .experiences__upRightHexagon svg {
+    width: 15rem;
+  }
+
+  .experiences__downRightHexagon svg {
+    width: 18rem;
+  }
+
+  .experiences__upLeftHexagon svg {
+    width: 17rem;
+  }
+}
+
+@media (min-width: 1300px) {
+  .experiences__upRightHexagon {
+    bottom: 32rem;
+    right: 4rem;
+  }
+
+  .experiences__upRightHexagon svg {
+    width: 18rem;
+  }
+
+  .experiences__downRightHexagon {
+    right: 0rem;
+  }
+
+  .experiences__downRightHexagon svg {
+    width: 20rem;
+  }
+
+  .experiences__upLeftHexagon svg {
+    width: 22rem;
   }
 }
 

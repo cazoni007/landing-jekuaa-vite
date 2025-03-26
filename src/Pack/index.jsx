@@ -3,7 +3,9 @@ import DownArrow from '../IconSelector/Icons/arrow-down-icon.svg?react';
 import UpArrow from '../IconSelector/Icons/arrow-up-icon.svg?react';
 import { LandingContext } from '../LandingContext';
 import { LoadAnimation } from '../IconSelector/LoadAnimation';
-import useIntersectionObserver from '../useIntersectionObserver';
+import { DarkOrangeHexagon } from '../IconSelector/DarkOrangeHexagon';
+import { PurpleHexagon } from '../IconSelector/PurpleHexagon';
+import { YellowHexagon } from '../IconSelector/YellowHexagon';
 import React from 'react';
 
 function Pack() {
@@ -54,13 +56,15 @@ function Pack() {
                             <div className={`pack__contentContainer ${service.state ? "pack__contentContainer--hidden" : ""}`}>
                                 {service.bonusTitle && <p className='pack__articleText pack__articleText--bonus'>{service.bonusTitle}</p>}
                                 <p className='pack__articleText'>{service.speech}</p>
+                                <DarkOrangeHexagon extra={"pack__darkOrangeHexagon"} />
+                                <YellowHexagon extra={"pack__yellowHexagon"} />
+                                <PurpleHexagon extra={"pack__purpleHexagon"} />
                                 <div className='pack__imgs pack__imgs--animation'>
                                     {loading && <div className='pack__animation'><LoadAnimation /></div>}
                                     {error && <p className="errorMessage">No se pudo cargar la imagen</p>}
+                                    {service.img && !error && (<div className='pack__imgFront'><div className='pack__hexagon'><img onLoad={() => setLoading(false)} src={service.img} alt={`Imagen de ${service.title}`} className='pack__img' /></div></div>)}
 
-                                    {service.img && !error && (<div className='pack__imgFront'><img onLoad={() => setLoading(false)} src={service.img} alt={`Imagen de ${service.title}`} className='pack__img' /></div>)}
-
-                                    {service.img2 && !error && (<div className='pack__imgBack'><img onLoad={() => setLoading(false)} src={service.img2} alt={`Imagen de ${service.title}`} className='pack__img' /></div>)}
+                                    {service.img2 && !error && (<div className='pack__imgBack'><div className='pack__hexagon'><img onLoad={() => setLoading(false)} src={service.img2} alt={`Imagen de ${service.title}`} className='pack__img' /></div></div>)}
                                 </div>
                             </div>
                         </article>

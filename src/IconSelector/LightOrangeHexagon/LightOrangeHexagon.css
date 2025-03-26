@@ -2,48 +2,5 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    left: -5rem;
     overflow: hidden;
-    top: 2rem;
-}
-
-.Icon-lightOrangeHexagon svg {
-    width: 10rem;
-}
-
-@media (min-width: 800px) {
-    .Icon-lightOrangeHexagon {
-        left: -2rem;
-        top: 2rem;
-    }
-
-    .Icon-lightOrangeHexagon svg {
-        width: 10rem;
-    }
-}
-
-@media (min-width: 1300px) {
-    .Icon-lightOrangeHexagon {
-        left: 1rem;
-    }
-
-    .Icon-lightOrangeHexagon svg {
-        width: 13rem;
-    }
-}
-
-@media (min-width: 1600px) {
-    .Icon-lightOrangeHexagon {
-        left: 20rem;
-    }
-
-    .Icon-lightOrangeHexagon svg {
-        width: 14rem;
-    }
-}
-
-@media (min-width: 1900px) {
-    .Icon-lightOrangeHexagon {
-        left: 30rem;
-    }
 }

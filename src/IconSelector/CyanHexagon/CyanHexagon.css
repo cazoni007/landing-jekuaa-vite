@@ -2,43 +2,5 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    right: -10rem;
     overflow: hidden;
-    bottom: 9.5rem;
-}
-
-.Icon-cyanHexagon svg{
-    width: 20rem;
-}
-
-@media (min-width: 800px) {
-    .Icon-cyanHexagon {
-        right: -6rem;
-        bottom: 11rem;
-    }
-    .Icon-cyanHexagon svg{
-        width: 22rem;
-    }
-}
-
-@media (min-width: 1300px) {
-    .Icon-cyanHexagon {
-        right: 1rem;
-        bottom: 9.6rem;
-    }
-    .Icon-cyanHexagon svg{
-        width: 25rem;
-    }
-}
-
-@media (min-width: 1600px) {
-    .Icon-cyanHexagon {
-        right: 10rem;
-    }
-}
-
-@media (min-width: 1900px) {
-    .Icon-cyanHexagon {
-        right: 20rem;
-    }
 }

@@ -58,10 +58,8 @@ function Experiences() {
                                     <h2 className='experiences__titleArticle' >{experience.title}</h2>
                                     <p className='experiences__speechArticle'>{experience.speech}</p>
                                 </div>
+                                {experience.hexagons}
                                 <div className='experiences__imgArticle experiences__imgArticle--section3'>
-                                    <YellowHexagon/>
-                                    <CyanHexagon/>
-                                    <DarkOrangeHexagon/>
                                     <div className='experiences__images--front'>
                                         {loading && <div className='experiences__animation'><LoadAnimation /></div>}
                                         {error && <p className="errorMessage">No se pudo cargar la imagen</p>}
@@ -88,6 +86,7 @@ function Experiences() {
                                     <h2 className='experiences__titleArticle' >{experience.title}</h2>
                                     <p className='experiences__speechArticle'>{experience.speech}</p>
                                 </div>
+                                {experience.hexagons}
                                 <div className='experiences__imgArticle experiences__imgArticle--section3'>
                                     <div className='experiences__images--front'>
                                         {loading && <div className='experiences__animation'><LoadAnimation /></div>}

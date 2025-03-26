@@ -42,6 +42,13 @@ import ninosCocinando from './Media/ninos-cocinando.jpg';
 import jovenesAlimentando from './Media/jovenes-alimentando-avejas.jpg';
 import ninoConejo from './Media/nino-agarrando-conejo.jpg'
 
+//Iconos de hexagonos
+import { YellowHexagon } from "../IconSelector/YellowHexagon";
+import { CyanHexagon } from "../IconSelector/CyanHexagon";
+import { PurpleHexagon } from "../IconSelector/PurpleHexagon";
+import { DarkOrangeHexagon } from "../IconSelector/DarkOrangeHexagon";
+import { GreenHexagon } from "../IconSelector/GreenHexagon";
+
 const LandingContext = React.createContext();
 
 function LandingProvider({ children }) {
@@ -152,6 +159,7 @@ function LandingProvider({ children }) {
         img: estudiantesNaturaleza,
         img2: estudiantesNaturaleza2,
         color: 'experiences__article--educacion',
+        hexagons: [<CyanHexagon extra={"experiences__hexagonAnimation experiences__upRightHexagon"}/>, <YellowHexagon extra={"experiences__hexagonAnimation experiences__downRightHexagon"}/>, <DarkOrangeHexagon extra={"experiences__hexagonAnimation experiences__upLeftHexagon"}/>],
     },
     {
         title: 'Experiencias familiares en el bosque',
@@ -159,6 +167,8 @@ function LandingProvider({ children }) {
         img: senorasSentadas,
         img2: ninosAbeja,
         color: 'experiences__article--experiencias',
+        hexagons: [<PurpleHexagon extra={"experiences__hexagonAnimation experiences__upRightHexagon"}/>, <GreenHexagon extra={"experiences__hexagonAnimation experiences__downRightHexagon"}/>, <CyanHexagon extra={"experiences__hexagonAnimation experiences__upLeftHexagon"}/>],
+
     },]
 
     const experiences2 = [
@@ -168,6 +178,7 @@ function LandingProvider({ children }) {
             img: ninoEscavando,
             img2: jovenMirando,
             color: 'experiences__article--bienestar',
+            hexagons: [<YellowHexagon extra={"experiences__hexagonAnimation experiences__upRightHexagon"}/>, <DarkOrangeHexagon extra={"experiences__hexagonAnimation experiences__downRightHexagon"}/>, <PurpleHexagon extra={"experiences__hexagonAnimation experiences__upLeftHexagon"}/>],
         },
         {
             title: 'Alianzas estratégicas y experiencias personalizadas',
@@ -175,6 +186,7 @@ function LandingProvider({ children }) {
             img: empresaComiendo,
             img2: empresaCharla,
             color: 'experiences__article--alianzas',
+            hexagons: [<PurpleHexagon extra={"experiences__hexagonAnimation experiences__upRightHexagon"}/>, <GreenHexagon extra={"experiences__hexagonAnimation experiences__downRightHexagon"}/>, <CyanHexagon extra={"experiences__hexagonAnimation experiences__upLeftHexagon"}/>],
         },
     ]
 
