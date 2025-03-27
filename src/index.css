@@ -25,6 +25,7 @@ body {
 
 .main-content {
   flex: 1;
+  overflow: hidden;
   /* Hace que el contenido principal crezca y empuje el footer hacia abajo */
 }
 
