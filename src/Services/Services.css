@@ -2,17 +2,18 @@
     padding-bottom: 1.5rem;
     text-align: center;
     color: white;
-    background-color: hsla(267, 31%, 65%, 0.70);
 }
 
 .services__title {
+    color: black;
     padding: 1.5rem;
     font-size: 2rem;
     font-weight: 900;
 }
 
 .services__speech {
-    padding: 1.5rem;
+    color: black;
+    padding: 1.5rem 60rem;
     font-size: 1.4rem;
     font-weight: 550;
 }
@@ -46,10 +47,6 @@
     /* Empieza después de 13s 
 } */
 
-.services__back,
-.services__front {
-}
-
 .services__front {
     overflow: hidden;
     padding: 1rem;
@@ -69,10 +66,12 @@
 }
 
 .services__titleArticle {
+    color: black;
     font-size: 1.8rem;
 }
 
 .services__speechArticle {
+    color: black;
     padding-top: 1rem;
     padding-bottom: 1.5rem;
     font-size: 1.6rem;
@@ -225,6 +224,30 @@
 
     .services__button {
         font-size: 2.1rem;
+    }
+
+    .services__darkOrangeHexagon {
+        left: 58rem;
+    }
+    .services__darkOrangeHexagon svg {
+        width: 25rem;
+    }
+    
+    .services__yellowHexagon {
+        bottom: 4rem;
+        right: 65rem;
+    }
+    
+    .services__yellowHexagon svg {
+        width: 14rem;
+    }
+    
+    .services__cyanHexagon {
+        top: 4rem;
+        right: 65rem
+    }
+    .services__cyanHexagon svg{
+        width: 17rem;
     }
 }
 
