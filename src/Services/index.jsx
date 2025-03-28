@@ -19,7 +19,6 @@ function Services() {
                     <article className={`services__article services__article--${service.theme}`} key={service.title}>
                         {/* Lado frontal */}
                         <div className='services__front'>
-                            <div className='services__iconArticle'>{service.icon}</div>
                             <h2 className='services__titleArticle'>{service.title}</h2>
                             <p className='services__speechArticle'>{service.speech}</p>
                         </div>
