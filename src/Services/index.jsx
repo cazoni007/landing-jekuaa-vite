@@ -17,14 +17,12 @@ function Services() {
             <div className='services__articlesContainer'>
                 {propuestas.map(service => (
                     <article className={`services__article services__article--${service.theme}`} key={service.title}>
-                        {/* Lado frontal */}
-                        <div className='services__front'>
+                        <div className='services__text'>
                             <h2 className='services__titleArticle'>{service.title}</h2>
                             <p className='services__speechArticle'>{service.speech}</p>
                         </div>
 
-                        {/* Lado trasero con imagen */}
-                        <div className='services__back'>
+                        <div className='services__media'>
                             <YellowHexagon extra={'services__yellowHexagon'}/>
                             <CyanHexagon extra={'services__cyanHexagon'}/>
                             <DarkOrangeHexagon extra={'services__darkOrangeHexagon'}/>

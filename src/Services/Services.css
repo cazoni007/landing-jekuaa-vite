@@ -1,11 +1,14 @@
 .services {
     padding-bottom: 1.5rem;
     text-align: center;
-    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 }
 
 .services__title {
-    color: #AE712B;
+    color: #E85E2F;
     padding: 1.5rem;
     font-size: 2rem;
     font-weight: 900;
@@ -13,20 +16,20 @@
 
 .services__speech {
     color: #18513D;
-    padding: 1.5rem 60rem;
+    padding: 1.5rem 1.5rem;
     font-size: 1.4rem;
     font-weight: 550;
+    max-width: 80rem;
+    text-align: justify;
 }
 
 .services__article {
     border-radius: 0.4rem;
     text-align: left;
-    color: white;
-    min-height: 20rem;
-    /* Ajusta según contenido */
-    text-align: center;
-    overflow: hidden;
-    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 /* .services__article--fomentar {
@@ -47,14 +50,13 @@
     /* Empieza después de 13s 
 } */
 
-.services__front {
-    overflow: hidden;
+.services__text {
     padding: 1rem;
+    max-width: 70rem;
 }
 
-.services__back {
+.services__media {
     position: relative;
-    overflow: hidden;
     /* Hace que el lado trasero aparezca después del giro */
 }
 
@@ -66,16 +68,17 @@
 }
 
 .services__titleArticle {
-    color: #18513D;
+    color: #E85E2F;
     font-size: 1.8rem;
 }
 
 .services__speechArticle {
-    color: #AE712B;
+    color: #18513D;
     padding-top: 1rem;
     padding-bottom: 1.5rem;
     font-size: 1.6rem;
     font-weight: 400;
+    text-align: justify;
 }
 
 .services__iconArticle {
@@ -117,7 +120,7 @@
     /* Asegura que la imagen se recorte correctamente */
     position: relative;
     /* Para posicionar adornos si es necesario */
-    max-width: 70rem;
+    max-width: 50rem;
 }
 
 .services__darkOrangeHexagon {
@@ -146,7 +149,7 @@
 
 @media (min-width: 530px) {
     .services__darkOrangeHexagon {
-        left: 4rem;
+        left: 2rem;
     }
     .services__darkOrangeHexagon svg {
         width: 15rem;
@@ -213,42 +216,34 @@
         font-size: 2rem;
     }
 
-    .services__articlesContainer {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        width: 100%;
-    }
-
     .services__button {
         font-size: 2.1rem;
     }
+    
+}
 
-    .services__darkOrangeHexagon {
-        left: 58rem;
+@media (min-width: 1200px) {
+    .services__articlesContainer { 
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: end;
     }
-    .services__darkOrangeHexagon svg {
-        width: 25rem;
+    .services__article {
+        min-width: 124rem;
     }
+}
+
+@media (min-width: 1400px) { 
+    .services__text {
+        margin-right: 4rem;
+    }
+    .services__media {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (min-width: 1600px) {
     
-    .services__yellowHexagon {
-        bottom: 4rem;
-        right: 65rem;
-    }
-    
-    .services__yellowHexagon svg {
-        width: 14rem;
-    }
-    
-    .services__cyanHexagon {
-        top: 4rem;
-        right: 65rem
-    }
-    .services__cyanHexagon svg{
-        width: 17rem;
-    }
 }
 
 @keyframes breath {
