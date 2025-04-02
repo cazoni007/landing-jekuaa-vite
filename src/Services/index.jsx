@@ -15,12 +15,6 @@ function Services() {
         <section className='services' id='services'>
             <h2 className='services__title'>Nuestra propuesta:<br />Conectar, Educar y Transformar</h2>
             <p className='services__speech'>En Jekuaá bosque escuela, creamos experiencias únicas en la naturaleza que transforman la forma de aprender, conectar y vivir. Nuestra misión es:</p>
-            <YellowHexagon extra={"services__yellowHexagon"} />
-            <CyanHexagon extra={"services__cyanHexagon"} />
-            <PurpleHexagon extra={"services__purpleHexagon"} />
-
-            <CyanHexagon extra={"services__cyanHexagon--left"} />
-            <DarkOrangeHexagon extra={"services__darkOrangeHexagon--left"}/>
             <div className='services__articlesContainer'>
                 {propuestas.map(service => (
                     <article className={`services__article services__article--${service.theme}`} key={service.title}>
@@ -40,9 +34,6 @@ function Services() {
                     </article>
                 ))}
             </div>
-            <LightOrangeHexagon extra={"services__lightOrangeHexagon"}/>
-            <DarkOrangeHexagon extra={"services__darkOrangeHexagon"}/>
-            <GreenHexagon extra={"services__greenHexagon"}/>
 
             <NavLink className={`services__button--a ${activeSection && activeSection2 === 'experiencias' ? 'nabBar__item--focus dropMenu__item--focus' : ''}`} to='/experiencias' onClick={() => { setActiveSection('experiencias'); setActiveSection2('experiencias') }}><button className='services__button'>Nuestras experiencias diseñadas para ti</button></NavLink>
         </section>

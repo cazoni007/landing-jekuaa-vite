@@ -120,7 +120,7 @@
     /* Asegura que la imagen se recorte correctamente */
     position: relative;
     /* Para posicionar adornos si es necesario */
-    max-width: 50rem;
+    max-width: 70rem;
 }
 
 .services__upLeftHexagon {
@@ -200,6 +200,21 @@
 }
 
 @media (min-width: 800px) {
+    .services__upLeftHexagon {
+        left: 4rem;
+    }
+    .services__upLeftHexagon svg {
+        width: 18rem;
+    }
+    
+    .services__downRightHexagon svg {
+        width: 16rem;
+    }
+
+    .services__upRightHexagon svg{
+        width: 20rem;
+    }
+
     .services__speech {
         width: 80%;
         padding: 1.5rem 0rem;
@@ -216,7 +231,9 @@
     .services__title {
         font-size: 2.6rem;
     }
-
+    .services__text {
+        width: 950px;
+    }
     .services__speech {
         font-size: 2rem;
         max-width: 950px;
@@ -238,202 +255,51 @@
 
 @media (min-width: 1200px) {
     .services__upLeftHexagon {
-        left: 0rem;
+        left: -3rem;
     }
     .services__upLeftHexagon svg {
-        width: 12rem;
+        width: 22rem;
     }
     
     .services__downRightHexagon {
-        right: 2rem;
+        right: 0rem;
     }
     
     .services__downRightHexagon svg {
-        width: 10rem;
-    }
-    
-    .services__upRightHexagon {
-        top: -1rem;
-        right: 0rem
-    }
-    .services__upRightHexagon svg{
-        width: 15rem;
-    }
-
-    .services__text {
-        max-width: 60rem;
-    }
-    .services__hexagon {
-        max-width: 35rem;
-    }
-}
-
-@media (min-width: 1400px) {
-    .services__darkOrangeHexagon--left {
-        left: -1rem;
-        top: 8rem
-    }
-    .services__darkOrangeHexagon--left svg {
-        width: 21rem;
-    }
-
-    .services__cyanHexagon--left {
-        left: 1rem;
-        top: 30rem;
-    }
-    .services__cyanHexagon--left svg {
-        width: 13rem;
-    }
-
-    .services__lightOrangeHexagon {
-        right: 1rem;
-        top: 26rem;
-    }
-    .services__lightOrangeHexagon svg {
-        width: 25rem;
-    }
-    .services__darkOrangeHexagon {
-        right: 1rem;
-        top: 6rem;
-    }
-    .services__darkOrangeHexagon svg {
-        width: 20rem;
-    }
-    .services__greenHexagon {
-        right: 1rem;
-        top: 52rem;
-        z-index: -1;
-    }
-    .services__greenHexagon svg {
-        width: 14rem;
-    }    
-
-    .services__cyanHexagon {
-        right: 1rem;
-        bottom: 16rem;
-    }
-    .services__cyanHexagon svg {
-        width: 25rem;
-    }
-
-    .services__purpleHexagon {
-        right: 1rem;
-        bottom: 42.4rem;
-    }
-    .services__purpleHexagon svg {
-        width: 20rem;
-    }
-
-    .services__yellowHexagon {
-        right: 1rem;
-        bottom: 0;
-    }
-    .services__yellowHexagon svg {
-        width: 14rem;
-    }
-
-    .services__upLeftHexagon {
-        left: 1rem;
-    }
-    .services__upLeftHexagon svg {
-        width: 14rem;
-    }
-    
-    .services__downRightHexagon {
-        right: 4rem;
-    }
-    
-    .services__downRightHexagon svg {
-        width: 12rem;
+        width: 18rem;
     }
     
     .services__upRightHexagon {
         top: -2rem;
-        right: 2rem
+        right: -4rem
     }
     .services__upRightHexagon svg{
-        width: 15rem;
+        width: 22rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .services__upLeftHexagon {
+        left: -15rem;
+    }
+    .services__upLeftHexagon svg {
+        width: 26rem;
     }
     
-    .services__text {
-        margin-right: 4rem;
-        max-width: 45rem;
+    .services__downRightHexagon {
+        right: -4rem;
     }
-    .services__media {
-        margin-bottom: 3rem;
+    
+    .services__downRightHexagon svg {
+        width: 18rem;
     }
-    .services__hexagon {
-        max-width: 45rem;
+    
+    .services__upRightHexagon {
+        top: -2rem;
+        right: -12rem
     }
-}
-
-@media (min-width: 1600px) {
-    .services__darkOrangeHexagon--left {
-        left: 10rem;
-    }
-    .services__darkOrangeHexagon--left svg{
-        width: 24rem;
-    }
-
-    .services__cyanHexagon--left {
-        left: 20rem;
-    }
-
-    .services__lightOrangeHexagon {
-        right: 10rem;
-    }
-    .services__darkOrangeHexagon {
-        right: 15rem;
-    }
-    .services__greenHexagon {
-        right: 20rem;
-    }
-
-    .services__cyanHexagon {
-        right: 10rem;
-    }
-
-    .services__purpleHexagon {
-        right: 15rem;
-    }
-
-    .services__yellowHexagon {
-        right: 20rem;
-    }
-}
-
-@media (min-width: 1800px) {
-    .services__darkOrangeHexagon--left {
-        left: 22rem;
-    }
-
-    .services__cyanHexagon--left {
-        left: 30rem;
-    }
-    .services__cyanHexagon--left svg{
-        width: 15rem;
-    }
-
-    .services__lightOrangeHexagon {
-        right: 20rem;
-    }
-    .services__darkOrangeHexagon {
-        right: 24rem;
-    }
-    .services__greenHexagon {
-        right: 32rem;
-    }
-
-    .services__cyanHexagon {
-        right: 20rem;
-    }
-
-    .services__purpleHexagon {
-        right: 24rem;
-    }
-
-    .services__yellowHexagon {
-        right: 32rem;
+    .services__upRightHexagon svg{
+        width: 22rem;
     }
 }
 
