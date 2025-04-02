@@ -4,7 +4,7 @@
 
 .experiences__title {
   font-size: 2rem;
-  color: #18513D;
+  color: #E85E2F;
   text-align: center;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -12,11 +12,11 @@
 }
 
 .experiences__subtitle {
-  color: #AE712B;
+  color: #18513D;
   padding: 0rem 1.5rem;
   padding-bottom: 1.5rem;
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: 500;
   text-align: center;
 }
 
@@ -24,43 +24,37 @@
   padding: 1.5rem;
   border-radius: 0.4rem;
   text-align: left;
-  color: white;
-  box-shadow: 0rem 0.4rem 0.8rem rgba(0, 0, 0, 16%);
   margin: 1.5rem;
   height: fit-content;
-  overflow: hidden;
 }
 
 .experiences__article--educacion {
-  background-color: #A38AC1;
+  background-color: transparent;
 }
 
 .experiences__article--experiencias {
-  background-color: #FE8A01;
+  background-color: transparent;
 }
 
 .experiences__article--bienestar {
-  background-color: #03AF98;
+  background-color: transparent;
 }
 
 .experiences__article--alianzas {
-  background-color: #E85E2F;
-}
-
-.experiences__textContainer {
-  flex: '0 0 61.8%';
-  /*Uso del ratio de oro para el área de texto */
-  padding-right: 2rem;
+  background-color: transparent;
 }
 
 .experiences__titleArticle {
+  color: #E85E2F;
   font-size: 1.8rem;
   padding-bottom: 1rem;
 }
 
 .experiences__speechArticle {
+  color: #18513D;
   font-size: 1.5rem;
-  font-weight: 300;
+  font-weight: 450;
+  text-align: justify;
 }
 
 .experiences__imgArticle {
@@ -71,6 +65,7 @@
   align-content: center;
   /* Ajusta según contenido */
   transform-style: preserve-3d;
+  position: relative;
 }
 
 .experiences__imgArticle--section3 {
@@ -131,22 +126,22 @@
 }
 
 .experiences__upRightHexagon {
-  right: -1rem;
+  right: 0rem;
   bottom: 13rem;
   z-index: 1;
 }
 
 .experiences__upRightHexagon svg {
-  width: 12rem;
+  width: 11rem;
 }
 
 .experiences__downRightHexagon {
-  right: -4rem;
+  right: 0rem;
   bottom: 0rem;
 }
 
 .experiences__downRightHexagon svg {
-  width: 15rem;
+  width: 13rem;
 }
 
 .experiences__upLeftHexagon {
@@ -155,11 +150,17 @@
 }
 
 .experiences__upLeftHexagon svg {
-  width: 14rem;
+  width: 12rem;
 }
 
 .experiences__hexagonAnimation {
   animation: flipAnimation2 12s ease-in-out infinite;
+}
+
+@media (min-width: 370px) {
+  .experiences__upRightHexagon {
+    bottom: 20rem;
+  }
 }
 
 @media (min-width: 500px) {
@@ -180,13 +181,21 @@
   }
 }
 
+@media (min-width: 590px) {
+  .experiences__upRightHexagon {
+    bottom: 32rem;
+  }
+}
+
 @media (min-width: 700px) {
 
   .experience__firstArticles,
   .experience__secondArticles {
     width: 50%;
   }
-
+  .experiences__article--bienestar {
+    margin-bottom: 3.8rem;
+  }
   .experiences__articleContainer {
     display: flex;
     justify-content: center;
@@ -253,7 +262,7 @@
   }
 
   .experiences__subtitle {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .experiences__upRightHexagon {

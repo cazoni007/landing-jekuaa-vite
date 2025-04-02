@@ -1,11 +1,6 @@
 import React from 'react';
 import { LandingContext } from '../LandingContext';
 import { LoadAnimation } from '../IconSelector/LoadAnimation';
-import { YellowHexagon } from "../IconSelector/YellowHexagon";
-import { CyanHexagon } from "../IconSelector/CyanHexagon";
-import { PurpleHexagon } from "../IconSelector/PurpleHexagon";
-import { LightOrangeHexagon } from "../IconSelector/LightOrangeHexagon";
-import { DarkOrangeHexagon } from "../IconSelector/DarkOrangeHexagon";
 import './Experiencias.css'
 
 function Experiences() {

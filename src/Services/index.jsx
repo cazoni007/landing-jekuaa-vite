@@ -1,12 +1,6 @@
 import React from 'react';
 import { LandingContext } from '../LandingContext';
 import { NavLink } from 'react-router-dom';
-import { YellowHexagon } from "../IconSelector/YellowHexagon";
-import { CyanHexagon } from "../IconSelector/CyanHexagon";
-import { PurpleHexagon } from "../IconSelector/PurpleHexagon";
-import { LightOrangeHexagon } from "../IconSelector/LightOrangeHexagon";
-import { DarkOrangeHexagon } from "../IconSelector/DarkOrangeHexagon";
-import { GreenHexagon } from '../IconSelector/GreenHexagon';
 import './Services.css'
 
 function Services() {
@@ -17,7 +11,7 @@ function Services() {
             <p className='services__speech'>En Jekuaá bosque escuela, creamos experiencias únicas en la naturaleza que transforman la forma de aprender, conectar y vivir. Nuestra misión es:</p>
             <div className='services__articlesContainer'>
                 {propuestas.map(service => (
-                    <article className={`services__article services__article--${service.theme}`} key={service.title}>
+                    <article  ref={service.observador ? service.observador.ref : null} className={`services__article services__article--${service.theme} ${service.observador && 'hidden'}`} key={service.title}>
                         <div className='services__text'>
                             <h2 className='services__titleArticle'>{service.title}</h2>
                             <p className='services__speechArticle'>{service.speech}</p>

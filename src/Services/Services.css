@@ -76,7 +76,7 @@
     padding-top: 1rem;
     padding-bottom: 1.5rem;
     font-size: 1.6rem;
-    font-weight: 400;
+    font-weight: 550;
     text-align: justify;
 }
 
@@ -121,11 +121,13 @@
     position: relative;
     /* Para posicionar adornos si es necesario */
     max-width: 70rem;
+    animation: flipAnimation 14s ease-in-out infinite;
 }
 
 .services__upLeftHexagon {
     z-index: 1;
     left: -3rem;
+    animation: flipAnimation 14s ease-in-out infinite;
 }
 .services__upLeftHexagon svg {
     width: 14rem;
@@ -134,6 +136,7 @@
 .services__downRightHexagon {
     right: 1rem;
     bottom: 0rem;
+    animation: flipAnimation 14s ease-in-out infinite;
 }
 
 .services__downRightHexagon svg {
@@ -141,7 +144,8 @@
 }
 
 .services__upRightHexagon {
-    right: -3rem
+    right: -3rem;
+    animation: flipAnimation 14s ease-in-out infinite;
 }
 .services__upRightHexagon svg{
     width: 15rem;
@@ -280,7 +284,7 @@
 
 @media (min-width: 1400px) {
     .services__upLeftHexagon {
-        left: -15rem;
+        left: -13rem;
     }
     .services__upLeftHexagon svg {
         width: 26rem;
@@ -320,14 +324,14 @@
 @keyframes flipAnimation {
 
     0%,
-    80% {
+    45% {
         transform: rotateY(0deg);
     }
 
     /* Mantiene el frente visible por 15s */
-    85%,
+    50%,
     95% {
-        transform: rotateY(180deg);
+        transform: rotateY(360deg);
     }
 
     /* Gira y muestra la parte trasera por 3s */

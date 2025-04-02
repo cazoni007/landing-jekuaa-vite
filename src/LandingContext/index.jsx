@@ -50,6 +50,9 @@ import { DarkOrangeHexagon } from "../IconSelector/DarkOrangeHexagon";
 import { GreenHexagon } from "../IconSelector/GreenHexagon";
 import { LightOrangeHexagon } from "../IconSelector/LightOrangeHexagon";
 
+//Custom hook observador para animacion de aparicion de elemento y constantes usadas para el array de propuestas
+import useIntersectionObserver from "../useIntersectionObserver";
+
 const LandingContext = React.createContext();
 
 function LandingProvider({ children }) {
@@ -232,16 +235,19 @@ function LandingProvider({ children }) {
         img2: ninoConejo,
         header: 'pack__articleTitle--bonus'
     },]
-
+    
+    const fortalecer = useIntersectionObserver();
+    const promover = useIntersectionObserver();
     const propuestas = [{
         theme: "fomentar",
         title: "Fomentar aprendizajes significativos",
         speech: "Diseñamos programas que integran la educación y la experiencia, inspirando conexión y reflexión.",
         icon: <LightBulbIcon />,
         image: fomentarImg,
-        hexagon1: <YellowHexagon extra={'services__downRightHexagon'}/>,
-        hexagon2: <LightOrangeHexagon extra={'services__upRightHexagon'}/>,
-        hexagon3: <PurpleHexagon extra={'services__upLeftHexagon'}/>,
+        hexagon1: <YellowHexagon extra={'services__downRightHexagon'} />,
+        hexagon2: <LightOrangeHexagon extra={'services__upRightHexagon'} />,
+        hexagon3: <PurpleHexagon extra={'services__upLeftHexagon'} />,
+
     },
     {
         theme: "fortalecer",
@@ -249,9 +255,10 @@ function LandingProvider({ children }) {
         speech: "Creamos espacios para que familias, estudiantes y equipos se conecten con la naturaleza y entre sí.",
         icon: <NatureIcon />,
         image: fortalecerImg,
-        hexagon1: <DarkOrangeHexagon extra={'services__downRightHexagon'}/>,
-        hexagon2: <CyanHexagon extra={'services__upRightHexagon'}/>,
-        hexagon3: <GreenHexagon extra={'services__upLeftHexagon'}/>,
+        hexagon1: <DarkOrangeHexagon extra={'services__downRightHexagon'} />,
+        hexagon2: <CyanHexagon extra={'services__upRightHexagon'} />,
+        hexagon3: <GreenHexagon extra={'services__upLeftHexagon'} />,
+        observador: fortalecer,
     },
     {
         theme: "promover",
@@ -259,9 +266,10 @@ function LandingProvider({ children }) {
         speech: "Desarrollamos conciencia ambiental a través de prácticas y valores sostenibles.",
         icon: <CompostIcon />,
         image: promoverImg,
-        hexagon1: <YellowHexagon extra={'services__downRightHexagon'}/>,
-        hexagon2: <PurpleHexagon extra={'services__upRightHexagon'}/>,
-        hexagon3: <CyanHexagon extra={'services__upLeftHexagon'}/>,
+        hexagon1: <YellowHexagon extra={'services__downRightHexagon'} />,
+        hexagon2: <PurpleHexagon extra={'services__upRightHexagon'} />,
+        hexagon3: <CyanHexagon extra={'services__upLeftHexagon'} />,
+        observador: promover,
     },]
 
     // Incluimos containerRef para la sección de testimonios

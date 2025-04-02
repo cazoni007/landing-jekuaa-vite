@@ -6,7 +6,7 @@
 }
 
 .pack__subtitle {
-    color: #AE712B;
+    color: #E85E2F;
     padding: 0rem 1.5rem;
     padding-bottom: 1.5rem;
     font-size: 1.6rem;
@@ -32,8 +32,6 @@
     position: relative;
     width: 26rem;
     z-index: 2;
-    /* Se asegura de que el header esté por encima */
-    border-radius: 1.5rem 1.5rem 0rem 1.5rem;
     margin: 0rem 1.5rem 0rem 1.5rem;
 }
 
@@ -47,10 +45,7 @@
     width: 26rem;
     z-index: 1;
     border-radius: 0 0 0.4rem 0.4rem;
-    text-align: left;
-    color: white;
-    background-color: #18513D;
-    box-shadow: 0rem 0.4rem 0.8rem rgba(0, 0, 0, 16%);
+    text-align: justify;
     margin: 0rem 1.5rem 1.5rem 1.5rem;
     padding-bottom: 1.5rem;
     height: fit-content;
@@ -70,7 +65,7 @@
     padding: 1.5rem 1rem;
     color: white;
     text-align: center;
-    border-radius: 0.4rem 0.4rem 0 0;
+    border-radius: 0.4rem;
 }
 
 .pack__articleTitle--bonus {
@@ -90,49 +85,16 @@
 }
 
 .pack__articleText {
-    padding: 1.5rem;
+    color: #18513D;
+    padding: 1.5rem 0;
     font-size: 1.6rem;
-    font-weight: 200;
+    font-weight: 400;
 }
 
 .pack__articleText--bonus {
     text-align: center;
     font-weight: 900;
     padding-bottom: 0;
-}
-
-.Icon-upArrow {
-    position: absolute;
-    left: 0.5rem;
-    top: 1.5rem;
-    display: flex;
-    justify-content: center;
-}
-
-.Icon-upArrow svg {
-    fill: #9df98a;
-    width: 2.8rem;
-}
-
-.Icon-downArrow {
-    position: absolute;
-    left: 0.5rem;
-    top: 1.5rem;
-    display: flex;
-    justify-content: center;
-}
-
-.Icon-downArrow svg {
-    fill: #9df98a;
-    width: 2.8rem;
-}
-
-.Icon-upArrow:hover {
-    cursor: pointer;
-}
-
-.Icon-downArrow:hover {
-    cursor: pointer;
 }
 
 .pack__imgs {
@@ -268,10 +230,6 @@
 
     .pack__articleTitle {
         font-size: 2.2rem;
-    }
-
-    .pack__articleText {
-        font-weight: 230;
     }
 
     .pack__articleText--bonus {

@@ -12,7 +12,6 @@ import { DarkOrangeHexagon } from "../IconSelector/DarkOrangeHexagon";
 function Presentation() {
     const { videoSrc,
         videoSrcPc,
-        abejita,
         loadingPresentation,
         setLoadingPresentation,
         errorPresentation,

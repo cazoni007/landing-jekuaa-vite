@@ -1,6 +1,4 @@
 import './Pack.css'
-import DownArrow from '../IconSelector/Icons/arrow-down-icon.svg?react';
-import UpArrow from '../IconSelector/Icons/arrow-up-icon.svg?react';
 import { LandingContext } from '../LandingContext';
 import { LoadAnimation } from '../IconSelector/LoadAnimation';
 import { DarkOrangeHexagon } from '../IconSelector/DarkOrangeHexagon';
@@ -50,10 +48,8 @@ function Pack() {
                         <article ref={el => articlesRef.current[index] = el} className='pack__article hidden' key={index}>
                             <div className={`pack__headerContainer`} onClick={() => service.state ? service.setStateFalse() : service.setStateTrue()}>
                                 <h1 className={`pack__articleTitle ${service.header}`}>{service.title}</h1>
-                                <span className={`Icon-upArrow ${service.state ? "invisible" : ""}`}><UpArrow /></span>
-                                <span className={`Icon-downArrow ${!service.state ? "invisible" : ""}`}><DownArrow /></span>
                             </div>
-                            <div className={`pack__contentContainer ${service.state ? "pack__contentContainer--hidden" : ""}`}>
+                            <div className="pack__contentContainer">
                                 {service.bonusTitle && <p className='pack__articleText pack__articleText--bonus'>{service.bonusTitle}</p>}
                                 <p className='pack__articleText'>{service.speech}</p>
                                 <DarkOrangeHexagon extra={"pack__darkOrangeHexagon"} />
