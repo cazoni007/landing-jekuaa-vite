@@ -5,6 +5,7 @@
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 .services__title {
@@ -16,15 +17,14 @@
 
 .services__speech {
     color: #18513D;
-    padding: 1.5rem 1.5rem;
+    padding: 1.5rem 2.5rem;
     font-size: 1.4rem;
     font-weight: 550;
-    max-width: 80rem;
+    max-width: 95rem;
     text-align: justify;
 }
 
 .services__article {
-    border-radius: 0.4rem;
     text-align: left;
     display: flex;
     flex-wrap: wrap;
@@ -51,8 +51,7 @@
 } */
 
 .services__text {
-    padding: 1rem;
-    max-width: 70rem;
+    padding: 2.5rem;
 }
 
 .services__media {
@@ -88,6 +87,7 @@
 }
 
 .services__button {
+    margin-top: 4rem;
     font-family: "DM Sans", serif;
     border: none;
     border-radius: 3.5rem;
@@ -123,51 +123,51 @@
     max-width: 50rem;
 }
 
-.services__darkOrangeHexagon {
+.services__upLeftHexagon {
     z-index: 1;
     left: -3rem;
 }
-.services__darkOrangeHexagon svg {
+.services__upLeftHexagon svg {
     width: 14rem;
 }
 
-.services__yellowHexagon {
+.services__downRightHexagon {
     right: 1rem;
     bottom: 0rem;
 }
 
-.services__yellowHexagon svg {
+.services__downRightHexagon svg {
     width: 11rem;
 }
 
-.services__cyanHexagon {
+.services__upRightHexagon {
     right: -3rem
 }
-.services__cyanHexagon svg{
+.services__upRightHexagon svg{
     width: 15rem;
 }
 
 @media (min-width: 530px) {
-    .services__darkOrangeHexagon {
+    .services__upLeftHexagon {
         left: 2rem;
     }
-    .services__darkOrangeHexagon svg {
+    .services__upLeftHexagon svg {
         width: 15rem;
     }
     
-    .services__yellowHexagon {
+    .services__downRightHexagon {
         right: 3rem;
     }
     
-    .services__yellowHexagon svg {
+    .services__downRightHexagon svg {
         width: 13rem;
     }
     
-    .services__cyanHexagon {
+    .services__upRightHexagon {
         top: -0.5rem;
         right: 4rem
     }
-    .services__cyanHexagon svg{
+    .services__upRightHexagon svg{
         width: 17rem;
     }
 }
@@ -199,6 +199,19 @@
     }
 }
 
+@media (min-width: 800px) {
+    .services__speech {
+        width: 80%;
+        padding: 1.5rem 0rem;
+    }
+    .services__text {
+        padding: 2.5rem 0rem;
+    }
+    .services__articlesContainer {
+        width: 80%;
+    }
+}
+
 @media (min-width: 1000px) {
     .services__title {
         font-size: 2.6rem;
@@ -206,6 +219,7 @@
 
     .services__speech {
         font-size: 2rem;
+        max-width: 950px;
     }
 
     .services__titleArticle {
@@ -223,27 +237,204 @@
 }
 
 @media (min-width: 1200px) {
-    .services__articlesContainer { 
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: end;
+    .services__upLeftHexagon {
+        left: 0rem;
     }
-    .services__article {
-        min-width: 124rem;
+    .services__upLeftHexagon svg {
+        width: 12rem;
+    }
+    
+    .services__downRightHexagon {
+        right: 2rem;
+    }
+    
+    .services__downRightHexagon svg {
+        width: 10rem;
+    }
+    
+    .services__upRightHexagon {
+        top: -1rem;
+        right: 0rem
+    }
+    .services__upRightHexagon svg{
+        width: 15rem;
+    }
+
+    .services__text {
+        max-width: 60rem;
+    }
+    .services__hexagon {
+        max-width: 35rem;
     }
 }
 
-@media (min-width: 1400px) { 
+@media (min-width: 1400px) {
+    .services__darkOrangeHexagon--left {
+        left: -1rem;
+        top: 8rem
+    }
+    .services__darkOrangeHexagon--left svg {
+        width: 21rem;
+    }
+
+    .services__cyanHexagon--left {
+        left: 1rem;
+        top: 30rem;
+    }
+    .services__cyanHexagon--left svg {
+        width: 13rem;
+    }
+
+    .services__lightOrangeHexagon {
+        right: 1rem;
+        top: 26rem;
+    }
+    .services__lightOrangeHexagon svg {
+        width: 25rem;
+    }
+    .services__darkOrangeHexagon {
+        right: 1rem;
+        top: 6rem;
+    }
+    .services__darkOrangeHexagon svg {
+        width: 20rem;
+    }
+    .services__greenHexagon {
+        right: 1rem;
+        top: 52rem;
+        z-index: -1;
+    }
+    .services__greenHexagon svg {
+        width: 14rem;
+    }    
+
+    .services__cyanHexagon {
+        right: 1rem;
+        bottom: 16rem;
+    }
+    .services__cyanHexagon svg {
+        width: 25rem;
+    }
+
+    .services__purpleHexagon {
+        right: 1rem;
+        bottom: 42.4rem;
+    }
+    .services__purpleHexagon svg {
+        width: 20rem;
+    }
+
+    .services__yellowHexagon {
+        right: 1rem;
+        bottom: 0;
+    }
+    .services__yellowHexagon svg {
+        width: 14rem;
+    }
+
+    .services__upLeftHexagon {
+        left: 1rem;
+    }
+    .services__upLeftHexagon svg {
+        width: 14rem;
+    }
+    
+    .services__downRightHexagon {
+        right: 4rem;
+    }
+    
+    .services__downRightHexagon svg {
+        width: 12rem;
+    }
+    
+    .services__upRightHexagon {
+        top: -2rem;
+        right: 2rem
+    }
+    .services__upRightHexagon svg{
+        width: 15rem;
+    }
+    
     .services__text {
         margin-right: 4rem;
+        max-width: 45rem;
     }
     .services__media {
         margin-bottom: 3rem;
     }
+    .services__hexagon {
+        max-width: 45rem;
+    }
 }
 
 @media (min-width: 1600px) {
-    
+    .services__darkOrangeHexagon--left {
+        left: 10rem;
+    }
+    .services__darkOrangeHexagon--left svg{
+        width: 24rem;
+    }
+
+    .services__cyanHexagon--left {
+        left: 20rem;
+    }
+
+    .services__lightOrangeHexagon {
+        right: 10rem;
+    }
+    .services__darkOrangeHexagon {
+        right: 15rem;
+    }
+    .services__greenHexagon {
+        right: 20rem;
+    }
+
+    .services__cyanHexagon {
+        right: 10rem;
+    }
+
+    .services__purpleHexagon {
+        right: 15rem;
+    }
+
+    .services__yellowHexagon {
+        right: 20rem;
+    }
+}
+
+@media (min-width: 1800px) {
+    .services__darkOrangeHexagon--left {
+        left: 22rem;
+    }
+
+    .services__cyanHexagon--left {
+        left: 30rem;
+    }
+    .services__cyanHexagon--left svg{
+        width: 15rem;
+    }
+
+    .services__lightOrangeHexagon {
+        right: 20rem;
+    }
+    .services__darkOrangeHexagon {
+        right: 24rem;
+    }
+    .services__greenHexagon {
+        right: 32rem;
+    }
+
+    .services__cyanHexagon {
+        right: 20rem;
+    }
+
+    .services__purpleHexagon {
+        right: 24rem;
+    }
+
+    .services__yellowHexagon {
+        right: 32rem;
+    }
 }
 
 @keyframes breath {

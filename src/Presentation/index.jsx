@@ -67,9 +67,6 @@ function Presentation() {
                 </div>
             )}
             <div className="presentation" id="presentation">
-                <div className="presentation__abejaDiv">
-                    <img className="presentation__abejaImg" src={abejita} alt="abejita" />
-                </div>
                 <CyanHexagon extra={"presentation__cyanHexagon"}/>
                 <YellowHexagon extra={"presentation__yellowHexagon"}/>
                 <PurpleHexagon extra={"presentation__purpleHexagon"}/>
