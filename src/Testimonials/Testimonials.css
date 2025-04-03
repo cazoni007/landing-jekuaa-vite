@@ -37,11 +37,14 @@
     height: fit-content;
     font-style: italic;
     margin-bottom: 1.5rem;
+    color: white;
+}
+
+.testimonial__text {
+    padding: 1.2rem;
     background-color: #FE8A01;
     box-shadow: 0rem 0.4rem 0.8rem rgba(0, 0, 0, 16%);
-    padding: 1.2rem;
     border-left: #a05500  solid 0.7rem;
-    color: white;
 }
 
 .testimonial__autor {

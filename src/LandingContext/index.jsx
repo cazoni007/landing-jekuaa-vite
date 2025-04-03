@@ -22,7 +22,6 @@ import { LightBulbIcon } from '../IconSelector/LightBulbIcon'
 import logo from './Media/logo.png'
 
 import fotoMariela from "./Media/nino-mostrando-hormiga.jpg";
-import videoRicardo from "./Media/entrada-al-bosque.mp4";
 import fotoDaniel from "./Media/viendo-microscopio-lab.jpg";
 import fotoCarla from "./Media/jovenes-sentados.jpg";
 import estudiantesNaturaleza from './Media/jovenes-en-loma.jpg';
@@ -49,9 +48,6 @@ import { PurpleHexagon } from "../IconSelector/PurpleHexagon";
 import { DarkOrangeHexagon } from "../IconSelector/DarkOrangeHexagon";
 import { GreenHexagon } from "../IconSelector/GreenHexagon";
 import { LightOrangeHexagon } from "../IconSelector/LightOrangeHexagon";
-
-//Custom hook observador para animacion de aparicion de elemento y constantes usadas para el array de propuestas
-import useIntersectionObserver from "../useIntersectionObserver";
 
 const LandingContext = React.createContext();
 
@@ -139,7 +135,6 @@ function LandingProvider({ children }) {
         {
             person: "Ricardo Salvatierra, profesor de ciencias",
             speech: "Llevar a mis estudiantes al Bosque Jekuaa fue una de las mejores decisiones que tomé este año. Aprendieron más en un solo día de lo que podrían haber aprendido en semanas de teoría. La interacción con la naturaleza les abrió los ojos a la importancia del medioambiente de una manera práctica y emocionante.",
-            video: videoRicardo,
         },
         {
             person: "Carla Méndez",
@@ -236,8 +231,6 @@ function LandingProvider({ children }) {
         header: 'pack__articleTitle--bonus'
     },]
     
-    const fortalecer = useIntersectionObserver();
-    const promover = useIntersectionObserver();
     const propuestas = [{
         theme: "fomentar",
         title: "Fomentar aprendizajes significativos",
@@ -247,7 +240,6 @@ function LandingProvider({ children }) {
         hexagon1: <YellowHexagon extra={'services__downRightHexagon'} />,
         hexagon2: <LightOrangeHexagon extra={'services__upRightHexagon'} />,
         hexagon3: <PurpleHexagon extra={'services__upLeftHexagon'} />,
-
     },
     {
         theme: "fortalecer",
@@ -258,7 +250,6 @@ function LandingProvider({ children }) {
         hexagon1: <DarkOrangeHexagon extra={'services__downRightHexagon'} />,
         hexagon2: <CyanHexagon extra={'services__upRightHexagon'} />,
         hexagon3: <GreenHexagon extra={'services__upLeftHexagon'} />,
-        observador: fortalecer,
     },
     {
         theme: "promover",
@@ -269,7 +260,6 @@ function LandingProvider({ children }) {
         hexagon1: <YellowHexagon extra={'services__downRightHexagon'} />,
         hexagon2: <PurpleHexagon extra={'services__upRightHexagon'} />,
         hexagon3: <CyanHexagon extra={'services__upLeftHexagon'} />,
-        observador: promover,
     },]
 
     // Incluimos containerRef para la sección de testimonios

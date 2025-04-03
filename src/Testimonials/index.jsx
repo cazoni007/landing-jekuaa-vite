@@ -4,42 +4,25 @@ import { LandingContext } from '../LandingContext';
 import './Testimonials.css';
 
 function TestimonialItem({ testimonial }) {
-    const [loading, setLoading] = React.useState(!!testimonial.foto || !!testimonial.video);
+    const [loading, setLoading] = React.useState(!!testimonial.foto);
     const [error, setError] = React.useState(false);
 
-    const handleVideoError = () => {
-        setError(true);
-        setLoading(false);
-    };
-
     return (
-        <article className='testimonial__article'>
-            <p className='testimonial__personSpeech'>"{testimonial.speech}"</p>
-            <h2 className='testimonial__autor'>-{testimonial.person}</h2>
-
-            {loading && <div className='testimonial__animation'><LoadAnimation /></div>}
-
-            {testimonial.foto && !error && (
-                <div className='testimonial__containerMedia'>
-                    <img onLoad={() => setLoading(false)} className='testimonial__img' src={testimonial.foto} alt='imagen de testimonio' />
+        <>
+            <article className='testimonial__article'>
+                <div className='testimonial__text'>
+                    <p className='testimonial__personSpeech'>"{testimonial.speech}"</p>
+                    <h2 className='testimonial__autor'>-{testimonial.person}</h2>
                 </div>
-            )}
-
-            {error && <p className="errorMessage">No se pudo cargar el video</p>}
-
-            {testimonial.video && !error && (
-                <div className='testimonial__containerMedia'>
-                    <video
-                        onLoadedData={() => setLoading(false)}
-                        onError={handleVideoError}
-                        controls
-                        className='testimonial__video'>
-                        <source src={testimonial.video} type="video/mp4" />
-                        Tu navegador no soporta la reproducción de video.
-                    </video>
-                </div>
-            )}
-        </article>
+                {loading && <div className='testimonial__animation'><LoadAnimation /></div>}
+                {error && <p className="errorMessage">No se pudo cargar la imagen</p>}
+                {testimonial.foto && !error && (
+                    <div className='testimonial__containerMedia'>
+                        <img onLoad={() => setLoading(false)} className='testimonial__img' src={testimonial.foto} alt='imagen de testimonio' />
+                    </div>
+                )}
+            </article>
+        </>
     );
 }
 
@@ -66,7 +49,7 @@ function Testimonials() {
 
         return () => cancelAnimationFrame(animationFrame);
     }, [isPaused]);
-    
+
     return (
         <section className='testimonial' id='voces'>
             <h2 className='testimonial__title'>🌿 Voces que Inspiran 🌿</h2>

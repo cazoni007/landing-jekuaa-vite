@@ -193,14 +193,15 @@
   .experience__secondArticles {
     width: 50%;
   }
-  .experiences__article--bienestar {
-    margin-bottom: 3.8rem;
-  }
   .experiences__articleContainer {
     display: flex;
     justify-content: center;
     margin: 0 auto;
     max-width: 130rem;
+  }
+
+  .experiences__article {
+    min-height: 57rem;
   }
 
   .experiences__title {
@@ -249,6 +250,10 @@
     width: 90rem;
   }
 
+  .experiences__article {
+    min-height: 60rem;
+  }
+
   .experiences__titleArticle {
     font-size: 2.2rem;
   }
@@ -283,6 +288,10 @@
 }
 
 @media (min-width: 1300px) {
+  .experiences__article {
+    min-height: 65rem;
+  }
+
   .experiences__upRightHexagon {
     bottom: 32rem;
     right: 4rem;
