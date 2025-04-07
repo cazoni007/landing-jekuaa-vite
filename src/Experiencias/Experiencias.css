@@ -27,6 +27,10 @@
   margin: 1.5rem;
   height: fit-content;
 }
+.experiences__imagesContainer {
+  position: relative;
+  margin: 2rem 0rem;
+}
 
 .experiences__article--educacion {
   background-color: transparent;
@@ -126,65 +130,35 @@
 }
 
 .experiences__upRightHexagon {
-  right: 0rem;
-  bottom: 13rem;
+  right: -4rem;
+  top: -3rem;
   z-index: 1;
 }
 
 .experiences__upRightHexagon svg {
-  width: 11rem;
+  width: clamp(2rem, calc(2rem + 0.4 * 100vw), 35rem);
 }
 
 .experiences__downRightHexagon {
-  right: 0rem;
-  bottom: 0rem;
+  right: -2rem;
+  bottom: -7rem;
 }
 
 .experiences__downRightHexagon svg {
-  width: 13rem;
+  width: clamp(6rem, calc(6rem + 0.4 * 100vw), 35rem);
 }
 
 .experiences__upLeftHexagon {
-  left: -1rem;
-  bottom: 10;
+  left: -3rem;
+  top: -1.5rem;
 }
 
 .experiences__upLeftHexagon svg {
-  width: 12rem;
+  width: clamp(4rem, calc(4rem + 0.4 * 100vw), 35rem);
 }
 
 .experiences__hexagonAnimation {
   animation: flipAnimation2 12s ease-in-out infinite;
-}
-
-@media (min-width: 370px) {
-  .experiences__upRightHexagon {
-    bottom: 20rem;
-  }
-}
-
-@media (min-width: 500px) {
-  .experiences__upRightHexagon {
-    bottom: 25rem;
-  }
-
-  .experiences__upRightHexagon svg {
-    width: 15rem;
-  }
-
-  .experiences__downRightHexagon svg {
-    width: 18rem;
-  }
-
-  .experiences__upLeftHexagon svg {
-    width: 17rem;
-  }
-}
-
-@media (min-width: 590px) {
-  .experiences__upRightHexagon {
-    bottom: 32rem;
-  }
 }
 
 @media (min-width: 700px) {
@@ -201,7 +175,7 @@
   }
 
   .experiences__article {
-    min-height: 57rem;
+    min-height: 62rem;
   }
 
   .experiences__title {
@@ -224,21 +198,14 @@
     font-size: 1.8rem;
   }
 
-  .experiences__upRightHexagon {
-    right: -1rem;
-    bottom: 13rem;
-  }
-
   .experiences__upRightHexagon svg {
-    width: 12rem;
+    width: clamp(2rem, calc(2rem + 0.2 * 100vw), 28rem);
   }
-
   .experiences__downRightHexagon svg {
-    width: 15rem;
+    width: clamp(6rem, calc(6rem + 0.2 * 100vw), 38rem);
   }
-
   .experiences__upLeftHexagon svg {
-    width: 14rem;
+    width: clamp(4rem, calc(4rem + 0.2 * 100vw), 29rem);
   }
 }
 
@@ -248,10 +215,6 @@
   .experience__firstArticles,
   .experience__secondArticles {
     width: 90rem;
-  }
-
-  .experiences__article {
-    min-height: 60rem;
   }
 
   .experiences__titleArticle {
@@ -270,47 +233,11 @@
     font-size: 2.2rem;
   }
 
-  .experiences__upRightHexagon {
-    bottom: 25rem;
-  }
-
-  .experiences__upRightHexagon svg {
-    width: 15rem;
-  }
-
-  .experiences__downRightHexagon svg {
-    width: 18rem;
-  }
-
-  .experiences__upLeftHexagon svg {
-    width: 17rem;
-  }
 }
 
 @media (min-width: 1300px) {
   .experiences__article {
-    min-height: 65rem;
-  }
-
-  .experiences__upRightHexagon {
-    bottom: 32rem;
-    right: 4rem;
-  }
-
-  .experiences__upRightHexagon svg {
-    width: 18rem;
-  }
-
-  .experiences__downRightHexagon {
-    right: 0rem;
-  }
-
-  .experiences__downRightHexagon svg {
-    width: 20rem;
-  }
-
-  .experiences__upLeftHexagon svg {
-    width: 22rem;
+    min-height: 68rem;
   }
 }
 

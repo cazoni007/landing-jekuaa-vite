@@ -160,29 +160,29 @@
     /* Para posicionar adornos si es necesario */
 }
 
-.pack__darkOrangeHexagon {
-    bottom: 15rem;
-    right: 0rem;
+.pack__upRightHexagon {
+    bottom: 8rem;
+    right: -2.5rem;
     animation: flipAnimation3 12s ease-in-out infinite;
 }
-.pack__darkOrangeHexagon svg {
-    width: 12rem;
+.pack__upRightHexagon svg {
+    width: 20rem;
 }
-.pack__yellowHexagon {
-    right: 1.5rem;
-    bottom: 0;
+.pack__downRightHexagon {
+    right: -1rem;
+    bottom: 1rem;
     z-index: 1;
     animation: flipAnimation3 12s ease-in-out infinite;
 }
-.pack__yellowHexagon svg {
-    width: 8rem;
+.pack__downRightHexagon svg {
+    width: 10rem;
 }
-.pack__purpleHexagon {
-    left: -1rem;
+.pack__upLeftHexagon {
+    left: -2.5rem;
     animation: flipAnimation3 12s ease-in-out infinite;
 }
-.pack__purpleHexagon svg {
-    width: 14rem;
+.pack__upLeftHexagon svg {
+    width: 16rem;
 }
 
 @media (min-width:700px) {
@@ -236,17 +236,11 @@
         font-weight: 900;
     }
 
-    .pack__darkOrangeHexagon svg {
-        width: 14rem;
+    .pack__upRightHexagon {
+        bottom: 11rem;
     }
-    .pack__yellowHexagon {
+    .pack__downRightHexagon {
         right: 0.5rem;
-    }
-    .pack__yellowHexagon svg {
-        width: 10rem;
-    }
-    .pack__purpleHexagon svg {
-        width: 16rem;
     }
 }
 

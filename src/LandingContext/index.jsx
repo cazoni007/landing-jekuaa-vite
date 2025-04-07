@@ -131,6 +131,7 @@ function LandingProvider({ children }) {
             person: "Cristhian Camacho",
             speech: "Fue una experiencia increíble para mis hijos. No solo aprendieron sobre la naturaleza, sino que realmente se sintieron parte de ella. Verlos correr entre los árboles, descubrir insectos y emocionarse con cada estación fue algo mágico. Definitivamente volveremos.",
             foto: fotoMariela,
+            hexagons: [<DarkOrangeHexagon extra={"testimonial__upRightHexagon"} />, <YellowHexagon extra={"testimonial__downRightHexagon"} />, <PurpleHexagon extra={"testimonial__upLeftHexagon"} />,],
         },
         {
             person: "Ricardo Salvatierra, profesor de ciencias",
@@ -140,6 +141,7 @@ function LandingProvider({ children }) {
             person: "Carla Méndez",
             speech: "Nos encantó la experiencia en familia. Fue un día lleno de conexión y aprendizaje, lejos del ruido de la ciudad. Los niños estaban fascinados con las estaciones y la interacción con los guías fue excelente. Aprendimos juntos y nos llevamos recuerdos inolvidables.",
             foto: fotoCarla,
+            hexagons: [<PurpleHexagon extra={"testimonial__upRightHexagon"} />, <YellowHexagon extra={"testimonial__downRightHexagon"} />, <GreenHexagon extra={"testimonial__upLeftHexagon"} />,],
         },
         {
             person: "Luis Arce, amante del ecoturismo",
@@ -149,6 +151,7 @@ function LandingProvider({ children }) {
             person: "Daniel Rojas",
             speech: "Como estudiante de biología, este lugar fue un paraíso. Las estaciones están diseñadas para que realmente puedas observar, tocar y experimentar lo que aprendes en libros. Me encantó la experiencia y la recomiendo a cualquiera que quiera acercarse más a la naturaleza.",
             foto: fotoDaniel,
+            hexagons: [<GreenHexagon extra={"testimonial__upRightHexagon"} />, <YellowHexagon extra={"testimonial__downRightHexagon"} />, <CyanHexagon extra={"testimonial__upLeftHexagon"} />,],
         },
     ];
 
@@ -198,6 +201,7 @@ function LandingProvider({ children }) {
         img: ninosPlantando,
         img2: explicandoAbejas,
         header: 'pack__articleTitle--aventureros',
+        hexagons: [<DarkOrangeHexagon extra={"pack__upRightHexagon"} />, <YellowHexagon extra={"pack__downRightHexagon"} />, <PurpleHexagon extra={"pack__upLeftHexagon"} />,],
     },
     {
         title: 'Jekuaá Innovadores',
@@ -208,6 +212,7 @@ function LandingProvider({ children }) {
         img: ninosArte,
         img2: ninosViendoFrascos,
         header: 'pack__articleTitle--innovadores',
+        hexagons: [<PurpleHexagon extra={"pack__upRightHexagon"} />, <YellowHexagon extra={"pack__downRightHexagon"} />, <GreenHexagon extra={"pack__upLeftHexagon"} />,],
     },
     {
         title: 'Jekuaá Creadores',
@@ -218,6 +223,7 @@ function LandingProvider({ children }) {
         img: ninoCocinando,
         img2: ninosCocinando,
         header: 'pack__articleTitle--creadores',
+        hexagons: [<GreenHexagon extra={"pack__upRightHexagon"} />, <YellowHexagon extra={"pack__downRightHexagon"} />, <CyanHexagon extra={"pack__upLeftHexagon"} />,],
     },
     {
         title: 'Jekuaá Guardianes',
@@ -228,9 +234,10 @@ function LandingProvider({ children }) {
         setStateFalse: setFalse4,
         img: jovenesAlimentando,
         img2: ninoConejo,
-        header: 'pack__articleTitle--bonus'
+        header: 'pack__articleTitle--bonus',
+        hexagons: [<LightOrangeHexagon extra={"pack__upRightHexagon"} />, <YellowHexagon extra={"pack__downRightHexagon"} />, <DarkOrangeHexagon extra={"pack__upLeftHexagon"} />,],
     },]
-    
+
     const propuestas = [{
         theme: "fomentar",
         title: "Fomentar aprendizajes significativos",

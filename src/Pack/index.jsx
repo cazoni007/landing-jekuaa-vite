@@ -52,9 +52,7 @@ function Pack() {
                             <div className="pack__contentContainer">
                                 {service.bonusTitle && <p className='pack__articleText pack__articleText--bonus'>{service.bonusTitle}</p>}
                                 <p className='pack__articleText'>{service.speech}</p>
-                                <DarkOrangeHexagon extra={"pack__darkOrangeHexagon"} />
-                                <YellowHexagon extra={"pack__yellowHexagon"} />
-                                <PurpleHexagon extra={"pack__purpleHexagon"} />
+                                {service.hexagons}
                                 <div className='pack__imgs pack__imgs--animation'>
                                     {loading && <div className='pack__animation'><LoadAnimation /></div>}
                                     {error && <p className="errorMessage">No se pudo cargar la imagen</p>}

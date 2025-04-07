@@ -53,18 +53,20 @@ function Experiences() {
                                     <h2 className='experiences__titleArticle' >{experience.title}</h2>
                                     <p className='experiences__speechArticle'>{experience.speech}</p>
                                 </div>
-                                {experience.hexagons}
-                                <div className='experiences__imgArticle experiences__imgArticle--section3'>
-                                    <div className='experiences__images--front'>
-                                        {loading && <div className='experiences__animation'><LoadAnimation /></div>}
-                                        {error && <p className="errorMessage">No se pudo cargar la imagen</p>}
-                                        {experience.img && !error && (<div className='experiences__hexagon'><img onLoad={() => setLoading(false)} src={experience.img} alt={`Imagen de niño escavando`} className="experiences__image" /></div>)}
-                                    </div>
-                                    {/* Lado trasero con imagen */}
-                                    <div className='experiences__images--back'>
-                                        {loading && <div className='experiences__animation'><LoadAnimation /></div>}
-                                        {error && <p className="errorMessage">No se pudo cargar la imagen</p>}
-                                        {experience.img2 && !error && (<div className='experiences__hexagon'><img onLoad={() => setLoading(false)} src={experience.img2} alt={`Imagen sobre ${experience.title}`} className="experiences__image" /></div>)}
+                                <div className='experiences__imagesContainer'>
+                                    {experience.hexagons}
+                                    <div className='experiences__imgArticle experiences__imgArticle--section3'>
+                                        <div className='experiences__images--front'>
+                                            {loading && <div className='experiences__animation'><LoadAnimation /></div>}
+                                            {error && <p className="errorMessage">No se pudo cargar la imagen</p>}
+                                            {experience.img && !error && (<div className='experiences__hexagon'><img onLoad={() => setLoading(false)} src={experience.img} alt={`Imagen de niño escavando`} className="experiences__image" /></div>)}
+                                        </div>
+                                        {/* Lado trasero con imagen */}
+                                        <div className='experiences__images--back'>
+                                            {loading && <div className='experiences__animation'><LoadAnimation /></div>}
+                                            {error && <p className="errorMessage">No se pudo cargar la imagen</p>}
+                                            {experience.img2 && !error && (<div className='experiences__hexagon'><img onLoad={() => setLoading(false)} src={experience.img2} alt={`Imagen sobre ${experience.title}`} className="experiences__image" /></div>)}
+                                        </div>
                                     </div>
                                 </div>
                             </article>
@@ -81,18 +83,20 @@ function Experiences() {
                                     <h2 className='experiences__titleArticle' >{experience.title}</h2>
                                     <p className='experiences__speechArticle'>{experience.speech}</p>
                                 </div>
-                                {experience.hexagons}
-                                <div className='experiences__imgArticle experiences__imgArticle--section3'>
-                                    <div className='experiences__images--front'>
-                                        {loading && <div className='experiences__animation'><LoadAnimation /></div>}
-                                        {error && <p className="errorMessage">No se pudo cargar la imagen</p>}
-                                        {experience.img && !error && (<div className='experiences__hexagon'><img onLoad={() => setLoading(false)} src={experience.img} alt={`Imagen de ${experience.title}`} className="experiences__image" /></div>)}
-                                    </div>
-                                    {/* Lado trasero con imagen */}
-                                    <div className='experiences__images--back'>
-                                        {loading && <div className='experiences__animation'><LoadAnimation /></div>}
-                                        {error && <p className="errorMessage">No se pudo cargar la imagen</p>}
-                                        {experience.img2 && !error && (<div className='experiences__hexagon'><img onLoad={() => setLoading(false)} src={experience.img2} alt={`Imagen sobre ${experience.title}`} className="experiences__image" /></div>)}
+                                <div className='experiences__imagesContainer'>
+                                    {experience.hexagons}
+                                    <div className='experiences__imgArticle experiences__imgArticle--section3'>
+                                        <div className='experiences__images--front'>
+                                            {loading && <div className='experiences__animation'><LoadAnimation /></div>}
+                                            {error && <p className="errorMessage">No se pudo cargar la imagen</p>}
+                                            {experience.img && !error && (<div className='experiences__hexagon'><img onLoad={() => setLoading(false)} src={experience.img} alt={`Imagen de ${experience.title}`} className="experiences__image" /></div>)}
+                                        </div>
+                                        {/* Lado trasero con imagen */}
+                                        <div className='experiences__images--back'>
+                                            {loading && <div className='experiences__animation'><LoadAnimation /></div>}
+                                            {error && <p className="errorMessage">No se pudo cargar la imagen</p>}
+                                            {experience.img2 && !error && (<div className='experiences__hexagon'><img onLoad={() => setLoading(false)} src={experience.img2} alt={`Imagen sobre ${experience.title}`} className="experiences__image" /></div>)}
+                                        </div>
                                     </div>
                                 </div>
                             </article>

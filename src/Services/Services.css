@@ -125,54 +125,46 @@
 }
 
 .services__upLeftHexagon {
-    z-index: 1;
-    left: -3rem;
+    left: -1rem;
+    top: -3rem;
     animation: flipAnimation 14s ease-in-out infinite;
 }
 .services__upLeftHexagon svg {
-    width: 14rem;
+    width: clamp(6em, calc(6rem + 0.4 * 100vw), 35rem);
 }
 
 .services__downRightHexagon {
-    right: 1rem;
-    bottom: 0rem;
+    right: 0rem;
+    bottom: -2rem;
     animation: flipAnimation 14s ease-in-out infinite;
 }
 
 .services__downRightHexagon svg {
-    width: 11rem;
+    width: clamp(3rem, calc(3rem + 0.4 * 100vw), 30rem);
 }
 
 .services__upRightHexagon {
-    right: -3rem;
+    right: -5rem;
+    top: -5rem;
+    z-index: 1;
     animation: flipAnimation 14s ease-in-out infinite;
 }
 .services__upRightHexagon svg{
-    width: 15rem;
+    width: clamp(6rem, calc(6rem + 0.4 * 100vw), 40rem);
 }
 
 @media (min-width: 530px) {
     .services__upLeftHexagon {
-        left: 2rem;
-    }
-    .services__upLeftHexagon svg {
-        width: 15rem;
+        left: -6rem;
     }
     
     .services__downRightHexagon {
-        right: 3rem;
-    }
-    
-    .services__downRightHexagon svg {
-        width: 13rem;
+        right: 0rem;
     }
     
     .services__upRightHexagon {
-        top: -0.5rem;
-        right: 4rem
-    }
-    .services__upRightHexagon svg{
-        width: 17rem;
+        top: -6rem;
+        right: -6rem;
     }
 }
 
@@ -193,30 +185,22 @@
         font-size: 1.8rem;
     }
 
-    .services__iconArticle svg {
-        width: 3.6rem;
-    }
-
     .services__button {
         max-width: 550px;
         font-size: 1.9rem;
+    }
+
+    .services__upRightHexagon {
+        right: -8rem;
     }
 }
 
 @media (min-width: 800px) {
     .services__upLeftHexagon {
-        left: 4rem;
+        left: -5rem;
     }
-    .services__upLeftHexagon svg {
-        width: 18rem;
-    }
-    
-    .services__downRightHexagon svg {
-        width: 16rem;
-    }
-
-    .services__upRightHexagon svg{
-        width: 20rem;
+    .services__upRightHexagon {
+        right: -14rem;
     }
 
     .services__speech {
@@ -257,54 +241,30 @@
     
 }
 
-@media (min-width: 1200px) {
-    .services__upLeftHexagon {
-        left: -3rem;
+@media (min-width: 1300px) {
+    .services__title {
+        font-size: 3rem;
     }
-    .services__upLeftHexagon svg {
-        width: 22rem;
+    .services__text {
+        width: 950px;
     }
-    
-    .services__downRightHexagon {
-        right: 0rem;
+    .services__speech {
+        font-size: 2.4rem;
+        max-width: 950px;
     }
-    
-    .services__downRightHexagon svg {
-        width: 18rem;
-    }
-    
-    .services__upRightHexagon {
-        top: -2rem;
-        right: -4rem
-    }
-    .services__upRightHexagon svg{
-        width: 22rem;
-    }
-}
 
-@media (min-width: 1400px) {
-    .services__upLeftHexagon {
-        left: -13rem;
+    .services__titleArticle {
+        font-size: 3rem;
     }
-    .services__upLeftHexagon svg {
-        width: 26rem;
+
+    .services__speechArticle {
+        font-size: 2.4rem;
     }
-    
-    .services__downRightHexagon {
-        right: -4rem;
-    }
-    
-    .services__downRightHexagon svg {
-        width: 18rem;
+
+    .services__button {
+        font-size: 2.4rem;
     }
     
-    .services__upRightHexagon {
-        top: -2rem;
-        right: -12rem
-    }
-    .services__upRightHexagon svg{
-        width: 22rem;
-    }
 }
 
 @keyframes breath {

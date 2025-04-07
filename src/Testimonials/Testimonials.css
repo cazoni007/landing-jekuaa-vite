@@ -1,19 +1,23 @@
 .testimonial {
     margin-top: 2rem;
 }
+
 .testimonial__article--container {
     display: flex;
     flex-direction: row;
     overflow-x: auto;
-    margin: 1.5rem;
     align-items: flex-start;
-    scrollbar-width: none; /* Oculta la barra en Firefox */
-    -ms-overflow-style: none; /* Oculta la barra en Edge */
+    scrollbar-width: none;
+    /* Oculta la barra en Firefox */
+    -ms-overflow-style: none;
+    /* Oculta la barra en Edge */
 }
 
 .testimonial__article--container::-webkit-scrollbar {
-    display: none; /* Oculta la barra en Chrome y Safari */
+    display: none;
+    /* Oculta la barra en Chrome y Safari */
 }
+
 .testimonial__title {
     font-size: 2rem;
     color: #E85E2F;
@@ -36,7 +40,7 @@
     max-width: 100%;
     height: fit-content;
     font-style: italic;
-    margin-bottom: 1.5rem;
+    margin-bottom: 3.5rem;
     color: white;
 }
 
@@ -44,7 +48,7 @@
     padding: 1.2rem;
     background-color: #FE8A01;
     box-shadow: 0rem 0.4rem 0.8rem rgba(0, 0, 0, 16%);
-    border-left: #a05500  solid 0.7rem;
+    border-left: #a05500 solid 0.7rem;
 }
 
 .testimonial__autor {
@@ -57,18 +61,52 @@
     font-weight: 300;
 }
 
-.testimonial__containerMedia {
+.testimonial__mediaContainer {
+    position: relative;
+    margin-top: 2.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.testimonial__img {
     clip-path: polygon(35% 5%, 65% 5%, 90% 50%, 65% 95%, 35% 95%, 10% 50%);
     display: flex;
     justify-content: center;
-}
-
-.testimonial__img, .testimonial__video {
     width: 100%;
     padding-top: 1rem;
 }
 
-.testimonial__animation .icon-tree path, .testimonial__animation .icon-tree circle, .testimonial__animation .Icon-leaf svg, .testimonial__animation .Icon-leaf2 svg {
+.testimonial__upRightHexagon {
+    right: -2rem;
+    top: -3rem;
+}
+
+.testimonial__upRightHexagon svg {
+    width: clamp(2rem, calc(2rem + 0.4 * 100vw), 25rem);
+}
+
+.testimonial__downRightHexagon {
+    right: -5rem;
+    bottom: -4rem;
+    z-index: 1;
+}
+
+.testimonial__downRightHexagon svg {
+    width: clamp(6rem, calc(6rem + 0.4 * 100vw), 20rem);
+}
+
+.testimonial__upLeftHexagon {
+    left: 0rem;
+    top: -1.5rem;
+}
+
+.testimonial__upLeftHexagon svg {
+    width: clamp(4rem, calc(4rem + 0.4 * 100vw), 28rem);
+}
+
+.testimonial__animation .icon-tree path,
+.testimonial__animation .icon-tree circle,
+.testimonial__animation .Icon-leaf svg,
+.testimonial__animation .Icon-leaf2 svg {
     fill: #ffffff;
 }
 
@@ -76,21 +114,33 @@
     color: #ffffff;
 }
 
+@media (min-width: 500px) {
+    .testimonial__downRightHexagon {
+        right: 0rem;
+    }
+}
+
 @media (min-width: 700px) {
+    .testimonial__downRightHexagon {
+        right: -2rem;
+    }
+
     .testimonial__containerMedia {
         min-height: 35rem;
     }
+
     .testimonial__title {
         font-size: 2.4rem;
         max-width: 950px;
         margin: auto;
     }
-    
+
     .testimonial__speech {
         font-size: 1.8rem;
         max-width: 950px;
         margin: auto;
     }
+
     .testimonial__article {
         max-width: 460px;
     }
@@ -101,7 +151,7 @@
         display: block;
         font-size: 2.6rem;
     }
-    
+
     .testimonial__speech {
         font-size: 2rem;
     }
@@ -109,7 +159,7 @@
     .testimonial__autor {
         font-size: 2rem;
     }
-    
+
     .testimonial__personSpeech {
         font-size: 1.8rem;
     }

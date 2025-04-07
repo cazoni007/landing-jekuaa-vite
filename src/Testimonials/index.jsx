@@ -17,8 +17,11 @@ function TestimonialItem({ testimonial }) {
                 {loading && <div className='testimonial__animation'><LoadAnimation /></div>}
                 {error && <p className="errorMessage">No se pudo cargar la imagen</p>}
                 {testimonial.foto && !error && (
-                    <div className='testimonial__containerMedia'>
-                        <img onLoad={() => setLoading(false)} className='testimonial__img' src={testimonial.foto} alt='imagen de testimonio' />
+                    <div className='testimonial__mediaContainer'>
+                        {testimonial.hexagons}
+                        <div className='testimonial__img'>
+                            <img onLoad={() => setLoading(false)} className='testimonial__img' src={testimonial.foto} alt='imagen de testimonio' />
+                        </div>
                     </div>
                 )}
             </article>
