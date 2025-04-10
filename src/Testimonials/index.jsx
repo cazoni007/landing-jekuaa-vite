@@ -19,7 +19,7 @@ function TestimonialItem({ testimonial }) {
                 {testimonial.foto && !error && (
                     <div className='testimonial__mediaContainer'>
                         {testimonial.hexagons}
-                        <div className='testimonial__img'>
+                        <div className='testimonial__imgContainer'>
                             <img onLoad={() => setLoading(false)} className='testimonial__img' src={testimonial.foto} alt='imagen de testimonio' />
                         </div>
                     </div>

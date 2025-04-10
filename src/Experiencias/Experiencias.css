@@ -27,6 +27,7 @@
   margin: 1.5rem;
   height: fit-content;
 }
+
 .experiences__imagesContainer {
   position: relative;
   margin: 2rem 0rem;
@@ -93,11 +94,7 @@
 
 .experiences__image {
   width: 100%;
-  height: 100%;
   object-fit: cover;
-  /* Evita que la imagen se deforme */
-  object-position: center;
-  border-radius: 0.4rem;
 }
 
 .experiences__animation .icon-tree path,
@@ -167,6 +164,7 @@
   .experience__secondArticles {
     width: 50%;
   }
+
   .experiences__articleContainer {
     display: flex;
     justify-content: center;
@@ -201,9 +199,11 @@
   .experiences__upRightHexagon svg {
     width: clamp(2rem, calc(2rem + 0.2 * 100vw), 28rem);
   }
+
   .experiences__downRightHexagon svg {
     width: clamp(6rem, calc(6rem + 0.2 * 100vw), 38rem);
   }
+
   .experiences__upLeftHexagon svg {
     width: clamp(4rem, calc(4rem + 0.2 * 100vw), 29rem);
   }

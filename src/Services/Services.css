@@ -61,9 +61,7 @@
 
 .services__image {
     width: 100%;
-    height: fit-content;
     object-fit: cover;
-    border-radius: 0.4rem;
 }
 
 .services__titleArticle {
