@@ -17,7 +17,8 @@ function Presentation() {
         errorPresentation,
         isDesktop,
         setIsDesktop,
-        handleVideoError, } = React.useContext(LandingContext)
+        handleVideoError,
+        abejita } = React.useContext(LandingContext)
 
     const introSpeech = useIntersectionObserver();
     const title1 = useIntersectionObserver();
@@ -66,11 +67,14 @@ function Presentation() {
                 </div>
             )}
             <div className="presentation" id="presentation">
-                <CyanHexagon extra={"presentation__cyanHexagon"}/>
-                <YellowHexagon extra={"presentation__yellowHexagon"}/>
-                <PurpleHexagon extra={"presentation__purpleHexagon"}/>
-                <LightOrangeHexagon extra={"presentation__lightOrangeHexagon"}/>
-                <DarkOrangeHexagon extra={"presentation__darkOrangeHexagon"}/>
+                <div className="presentation__abejaDiv">
+                    <img className="presentation__abejaImg" src={abejita} alt="abejita" />
+                </div>
+                <CyanHexagon extra={"presentation__cyanHexagon"} />
+                <YellowHexagon extra={"presentation__yellowHexagon"} />
+                <PurpleHexagon extra={"presentation__purpleHexagon"} />
+                <LightOrangeHexagon extra={"presentation__lightOrangeHexagon"} />
+                <DarkOrangeHexagon extra={"presentation__darkOrangeHexagon"} />
                 <p ref={introSpeech.ref} className={`presentation__introSpeech hidden`}>A tan solo 15 minutos de la ciudad, en un rincón mágico rodeado de naturaleza, se encuentra Jekuaá bosque escuela. Un espacio único donde el canto de las aves, la sombra de los árboles y el aire fresco se convierten en el aula perfecta para aprender, conectar y crecer.</p>
                 <h2 ref={title1.ref} className={`presentation__title hidden`}>Quiénes somos</h2>
                 <p ref={speech1.ref} className={`presentation__speech hidden`}>
