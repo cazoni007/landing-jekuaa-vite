@@ -12,24 +12,21 @@ function Services() {
             <div className='services__articlesContainer'>
                 {propuestas.map(service => (
                     <article className={`services__article services__article--${service.theme}`} key={service.title}>
-                        <div className='services__text'>
+                        {/* Lado frontal */}
+                        <div className='services__front'>
+                            <div className='services__iconArticle'>{service.icon}</div>
                             <h2 className='services__titleArticle'>{service.title}</h2>
                             <p className='services__speechArticle'>{service.speech}</p>
                         </div>
 
-                        <div className='services__media'>
-                            {service.hexagon1}
-                            {service.hexagon2}
-                            {service.hexagon3}
-                            <div className='services__hexagon'>
-                                <img src={service.image} alt={`Imagen de ${service.title}`} className="services__image" />
-                            </div>
+                        {/* Lado trasero con imagen */}
+                        <div className='services__back'>
+                            <img src={service.image} alt={`Imagen de ${service.title}`} className="services__image" />
                         </div>
                     </article>
                 ))}
             </div>
-
-            <NavLink className={`services__button--a ${activeSection && activeSection2 === 'experiencias' ? 'nabBar__item--focus dropMenu__item--focus' : ''}`} to='/experiencias' onClick={() => { setActiveSection('experiencias'); setActiveSection2('experiencias') }}><button className='services__button'>Nuestras experiencias diseñadas para ti</button></NavLink>
+            <NavLink className='services__button--a' to='/experiencias'><button className='services__button'>Nuestras experiencias diseñadas para ti</button></NavLink>
         </section>
     )
 }
