@@ -56,6 +56,7 @@
     margin-bottom: 0.5rem;
     font-size: 1.35rem;
 }
+
 .form__buttomSubmit:hover {
     cursor: pointer;
 }
@@ -75,6 +76,36 @@
     /* Inicialmente ocultos */
 }
 
+.form__confirmation {
+    text-align: center;
+    font-weight: bold;
+    color: #18513D;
+    font-size: 1.8rem;
+    padding: 0rem 1rem;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ddd;
+    border-top-color: #E07502;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
 .socialMedia__contactIcon img {
     width: 5rem;
 }
@@ -89,6 +120,13 @@
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+/* Animacion de cargando*/
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
     }
 }
 
@@ -114,22 +152,28 @@
         max-width: 560px;
         margin: 1.8rem auto;
     }
+
     .formTitle {
         font-size: 2.4rem;
     }
+
     .form__spanText {
         font-size: 1.8rem;
     }
+
     .form__inputTag {
         padding: 1rem;
         font-size: 1.735rem;
     }
+
     .socialMedia {
         right: -7rem;
     }
+
     .form__buttomSubmit {
         font-size: 1.55rem;
     }
+
     .formText {
         font-size: 1.6rem;
     }
@@ -139,15 +183,22 @@
     .formTitle {
         font-size: 3rem;
     }
+
     .socialMedia {
         right: -10rem;
     }
+
     .form__buttomSubmit {
         font-size: 1.85rem;
     }
+
     .formText {
         padding-left: 15rem;
         padding-right: 15rem;
         font-size: 2rem;
+    }
+
+    .form__confirmation {
+        font-size: 2.2rem;
     }
 }

@@ -50,6 +50,9 @@ function Presentation() {
                             key={isDesktop ? 'desktop' : 'mobile'}
                             onLoadedData={() => setLoadingPresentation(false)}
                             onError={handleVideoError}
+                            playsInline
+                            webkit-playsinline="true"
+                            controls={false}
                             loop
                             autoPlay
                             muted
