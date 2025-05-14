@@ -81,11 +81,11 @@ function Presentation() {
                 <p ref={introSpeech.ref} className={`presentation__introSpeech hidden`}>A tan solo 15 minutos de la ciudad, en un rincón mágico rodeado de naturaleza, se encuentra Jekuaá bosque escuela. Un espacio único donde el canto de las aves, la sombra de los árboles y el aire fresco se convierten en el aula perfecta para aprender, conectar y crecer.</p>
                 <h2 ref={title1.ref} className={`presentation__title hidden`}>Quiénes somos</h2>
                 <p ref={speech1.ref} className={`presentation__speech hidden`}>
-                    Somos Jekuaá Urubó bosque escuela, un espacio único diseñado para reconectar a las personas con la naturaleza y entre sí. A través de experiencias al aire libre, ofrecemos oportunidades educativas, recreativas y transformadoras para colegios, familias, empresas y aliados estratégicos.
+                    Somos Jekuaá bosque escuela, un espacio único diseñado para reconectar a las personas con la naturaleza y entre sí. A través de experiencias al aire libre, ofrecemos oportunidades educativas, recreativas y transformadoras para colegios, familias, empresas y aliados estratégicos.
                 </p>
                 <h2 ref={title2.ref} className={`presentation__title hidden`}>Nuestro propósito</h2>
                 <p ref={speech2.ref} className={`presentation__speech hidden`}>
-                    Enriquecer la educación tradicional conectando a los niños con la naturaleza, inculcando valores, y motivándolos a cuidar su entorno con empatía y conciencia.
+                    Fomentar la conciencia ambiental y generar vinculos con la naturaleza a través de actividades prácticas y experiencias lúcidas, inculcando valores y motivando a nuestros jekuaamigos a cuidar su entorno con empatía y conciencia
                 </p>
             </div>
         </>

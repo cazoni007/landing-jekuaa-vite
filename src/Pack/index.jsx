@@ -37,7 +37,7 @@ function Pack() {
     }, [services]);
     return (
         <>
-            <h1 className='pack__title'>✨ Nuestros Servicios ✨</h1>
+            <h1 className='pack__title'>✨ Nuestros programas ✨</h1>
             <p className='pack__subtitle'>Descubre experiencias únicas para aprender, conectar y transformar en la naturaleza.</p>
             <section className='pack'>
                 {services.map((service, index) => {

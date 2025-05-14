@@ -194,7 +194,7 @@ function LandingProvider({ children }) {
 
     const services = [{
         title: 'Jekuaá Aventureros',
-        speech: 'Una experiencia inmersiva de un día donde los estudiantes recorren tres estaciones de aprendizaje en la naturaleza. Incluye actividades recreativas y contenido adaptado a la currícula nacional, brindando un enfoque vivencial y dinámico a la educación.',
+        speech: 'Una experiencia inmersiva de 4 a 6 horas donde los estudiantes recorren tres estaciones de aprendizaje en la naturaleza. Incluye actividades recreativas y contenido adaptado a la currícula nacional, brindando un enfoque vivencial y dinámico a la educación.',
         state: upArrowInvisible,
         setStateTrue: setTrue,
         setStateFalse: setFalse,
@@ -216,7 +216,7 @@ function LandingProvider({ children }) {
     },
     {
         title: 'Jekuaá Creadores',
-        speech: 'Un programa integral que combina una visita a Jekuaá Urubó con un taller de creatividad para la generación de proyectos y emprendimientos ambientales. Culmina con una feria de exposición donde los estudiantes presentan sus iniciativas ante la comunidad educativa y expertos.',
+        speech: 'Un programa integral que combina una visita a Jekuaá con un taller de creatividad para la generación de proyectos y emprendimientos ambientales. Culmina con una feria de exposición donde los estudiantes presentan sus iniciativas ante la comunidad educativa y expertos.',
         state: upArrowInvisible3,
         setStateTrue: setTrue3,
         setStateFalse: setFalse3,
